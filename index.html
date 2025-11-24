@@ -160,28 +160,6 @@
       z-index:5;
     }
     .loading.hidden{ display:none; }
-
-    @media (max-width: 900px){
-      .app{
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 1fr;
-      }
-      aside{
-        border-right:none;
-        border-bottom:1px solid var(--border);
-        flex-direction:row;
-        flex-wrap:wrap;
-        align-items:flex-start;
-        gap:10px;
-      }
-      .brand{ width:100%; }
-      .section{ width:calc(50% - 6px); }
-      .section.full{ width:100%; }
-      .chips{ width:100%; }
-      .legend{ width:100%; margin-top:0; }
-      main{ padding:8px; }
-      .loading{ inset:8px; }
-    }
   </style>
 </head>
 <body>
@@ -227,19 +205,6 @@
         </select>
       </div>
 
-      <div class="section full" id="chipSection" style="display:none;">
-        <label>빠른 유형</label>
-        <div class="chips" id="typeChips">
-          <div class="chip active" data-type="ALL">전체</div>
-          <div class="chip" data-type="수리">🔧 수리</div>
-          <div class="chip" data-type="충전">⚡ 충전</div>
-          <div class="chip" data-type="공기">💨 공기</div>
-          <div class="chip" data-type="대여">♿ 대여</div>
-          <div class="chip" data-type="센터">🏢 센터</div>
-          <div class="chip" data-type="판매">🛒 판매</div>
-        </div>
-      </div>
-
       <button class="btn" id="resetBtn">필터 초기화</button>
 
       <div class="legend" id="legend"></div>
@@ -250,213 +215,202 @@
       <div class="loading" id="loading">데이터 불러오는 중…</div>
     </main>
   </div>
+<script>
+const DISTRICT_COLORS = {
+  "광진구": "#F44336",
+  "성동구": "#9C27B0",
+  "강남구": "#2196F3",
+  "서초구": "#4CAF50",
+  "송파구": "#FFC107",
+  "강동구": "#FF5722"
+};
 
-  <script>
-    const DISTRICT_COLORS = {
-      "광진구": "#F44336",
-      "성동구": "#9C27B0",
-      "강남구": "#2196F3",
-      "서초구": "#4CAF50",
-      "송파구": "#FFC107",
-      "강동구": "#FF5722"
-    };
+const DISTRICT_KMLS = {
+  "광진구": "kml/GwangsungATSMAPS.kml",
+  "성동구": "kml/GwangsungATSMAPS.kml",
+  "강남구": "kml/KangnamseochoATSMAPS.kml",
+  "서초구": "kml/KangnamseochoATSMAPS.kml",
+  "송파구": "kml/GangdongsongpaATSMAPS.kml",
+  "강동구": "kml/GangdongsongpaATSMAPS.kml"
+};
 
-    const DISTRICT_KMLS = {
-      "광진구": "kml/GwangsungATSMAPS.kml",
-      "성동구": "kml/GwangsungATSMAPS.kml",
-      "강남구": "kml/KangnamseochoATSMAPS.kml",
-      "서초구": "kml/KangnamseochoATSMAPS.kml",
-      "송파구": "kml/GangdongsongpaATSMAPS.kml",
-      "강동구": "kml/GangdongsongpaATSMAPS.kml"
-    };
+const MINIMAL_STYLE = [
+  { featureType:"poi", stylers:[{visibility:"off"}] },
+  { featureType:"transit", stylers:[{visibility:"off"}] },
+  { featureType:"administrative", elementType:"labels", stylers:[{visibility:"off"}] },
+  { featureType:"road", elementType:"labels.icon", stylers:[{visibility:"off"}] }
+];
 
-    const MINIMAL_STYLE = [
-      { featureType:"poi", stylers:[{visibility:"off"}] },
-      { featureType:"transit", stylers:[{visibility:"off"}] },
-      { featureType:"administrative", elementType:"labels", stylers:[{visibility:"off"}] },
-      { featureType:"road", elementType:"labels.icon", stylers:[{visibility:"off"}] },
-      { featureType:"poi.park", stylers:[{visibility:"simplified"}] }
-    ];
+let map;
+let allMarkers = [];
+let activeInfoWindow = null;
 
-    let map;
-    let allMarkers = []; // { marker, district, type, name, desc }
+// 아이콘 생성
+function createCircleIcon(color){
+  return {
+    path: google.maps.SymbolPath.CIRCLE,
+    fillColor: color,
+    fillOpacity: 1,
+    strokeColor: "#ffffff",
+    strokeWeight: 1.5,
+    scale: 8
+  };
+}
 
-    function createCircleIcon(color){
-      return {
-        path: google.maps.SymbolPath.CIRCLE,
-        fillColor: color,
-        fillOpacity: 1,
-        strokeColor: "#ffffff",
-        strokeWeight: 1.5,
-        scale: 8
-      };
-    }
+// 유형 판별
+function detectType(name, desc){
+  const txt = (name + " " + desc).toLowerCase();
+  if(txt.includes("센터")) return "센터";
+  if(txt.includes("판매")) return "판매";
+  if(txt.includes("수리")) return "수리";
+  if(txt.includes("충전")) return "충전";
+  if(txt.includes("공기") || txt.includes("타이어")) return "공기";
+  if(txt.includes("대여")) return "대여";
+  return "기타";
+}
 
-    function detectType(name, desc){
-      const text = ((name||"")+" "+(desc||"")).toLowerCase();
-      if (text.includes("센터") || text.includes("보조기기센터")) return "센터";
-      if (text.includes("판매") || text.includes("매장")) return "판매";
-      if (text.includes("수리")) return "수리";
-      if (text.includes("충전")) return "충전";
-      if (text.includes("공기") || text.includes("타이어") || text.includes("바퀴")) return "공기";
-      if (text.includes("대여")) return "대여";
-      return "기타";
-    }
+// 지도 초기화
+function initMap(){
+  map = new google.maps.Map(document.getElementById("map"), {
+    center:{lat:37.54, lng:127.07},
+    zoom:12,
+    styles: MINIMAL_STYLE,
+    streetViewControl:false,
+    mapTypeControl:false
+  });
 
-    function initMap(){
-      map = new google.maps.Map(document.getElementById("map"), {
-        center:{lat:37.54, lng:127.07},
-        zoom:12,
-        styles: MINIMAL_STYLE,
-        mapTypeControl:false,
-        streetViewControl:false
+  buildLegend();
+  wireUI();
+  loadAll().then(()=>{
+    document.getElementById("loading").classList.add("hidden");
+    applyFilter();
+  });
+}
+
+// 범례
+function buildLegend(){
+  const legend = document.getElementById("legend");
+  legend.innerHTML = "<b style='color:#374151;'>구별 색상</b>";
+  Object.entries(DISTRICT_COLORS).forEach(([d,c])=>{
+    legend.innerHTML += `
+      <div class="legend-row">
+        <span class="dot" style="background:${c}"></span>
+        <span>${d}</span>
+      </div>`;
+  });
+}
+
+async function loadAll(){
+  for(const d of Object.keys(DISTRICT_KMLS)){
+    await loadKml(d, DISTRICT_KMLS[d]);
+  }
+}
+
+async function loadKml(district, url){
+  try{
+    const res = await fetch(url);
+    const text = await res.text();
+    const xml = new DOMParser().parseFromString(text,"text/xml");
+    const placemarks = xml.getElementsByTagName("Placemark");
+
+    for(const pm of placemarks){
+      const name = pm.getElementsByTagName("name")[0]?.textContent || "";
+      const desc = pm.getElementsByTagName("description")[0]?.textContent || "";
+      const coords = pm.getElementsByTagName("coordinates")[0]?.textContent.trim();
+
+      if(!coords) continue;
+
+      const [lng, lat] = coords.split(",").map(Number);
+      if(isNaN(lat)||isNaN(lng)) continue;
+
+      const type = detectType(name, desc);
+      const color = DISTRICT_COLORS[district];
+
+      const marker = new google.maps.Marker({
+        position:{lat,lng},
+        title:name,
+        map,
+        icon:createCircleIcon(color)
       });
 
-      buildLegend();
-      wireUI();
+      const infoHtml = `
+        <div style="min-width:220px;font-size:13px;">
+          <div style="font-weight:700;margin-bottom:4px;">${name}</div>
+          <div style="white-space:pre-wrap;">${desc}</div>
+          <a href="https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}"
+             target="_blank"
+             style="display:inline-block;margin-top:8px;color:#1976d2;font-weight:600;">
+             📍 길찾기
+          </a>
+        </div>
+      `;
 
-      loadAllDistricts().finally(()=> {
-        document.getElementById("loading").classList.add("hidden");
-        applyFilter();
-      });
-    }
+      const infoWindow = new google.maps.InfoWindow({content:infoHtml});
 
-    function buildLegend(){
-      const legend = document.getElementById("legend");
-      legend.innerHTML = "<div style='font-weight:700;color:#374151;margin-bottom:4px;'>구별 색상</div>";
-      Object.entries(DISTRICT_COLORS).forEach(([district,color])=>{
-        const row = document.createElement("div");
-        row.className="legend-row";
-        row.innerHTML = `<span class="dot" style="background:${color}"></span><span>${district}</span>`;
-        legend.appendChild(row);
-      });
-    }
-
-    async function loadAllDistricts(){
-      const districts = Object.keys(DISTRICT_KMLS);
-      for (const district of districts){
-        await loadKmlForDistrict(district, DISTRICT_KMLS[district]);
-      }
-    }
-
-    async function loadKmlForDistrict(district, kmlUrl){
-      try{
-        const res = await fetch(kmlUrl);
-        if(!res.ok){ console.warn("KML 로드 실패:", district, kmlUrl); return; }
-        const text = await res.text();
-        const xml = new DOMParser().parseFromString(text, "text/xml");
-        const placemarks = xml.getElementsByTagName("Placemark");
-        const color = DISTRICT_COLORS[district] || "#4285F4";
-
-        for (let i=0;i<placemarks.length;i++){
-          const pm = placemarks[i];
-          const name = pm.getElementsByTagName("name")[0]?.textContent || "";
-          const desc = pm.getElementsByTagName("description")[0]?.textContent || "";
-          const coords = pm.getElementsByTagName("coordinates")[0]?.textContent?.trim() || "";
-          if(!coords) continue;
-          const [lngS, latS] = coords.split(",");
-          const lat = parseFloat(latS), lng = parseFloat(lngS);
-          if(isNaN(lat)||isNaN(lng)) continue;
-
-          const type = detectType(name, desc);
-
-          const marker = new google.maps.Marker({
-            position:{lat,lng},
-            map,
-            title:name,
-            icon:createCircleIcon(color)
-          });
-
-          const infoHtml = `
-            <div style="min-width:220px;font-size:13px;">
-              <div style="font-weight:700;margin-bottom:4px;">${name || "이름 없음"}</div>
-              <div style="white-space:pre-wrap;">${desc || ""}</div>
-              <div style="margin-top:6px;font-size:11px;color:#666;">구: ${district} / 유형: ${type}</div>
-            </div>`;
-          const infoWindow = new google.maps.InfoWindow({content:infoHtml});
-          marker.addListener("click", ()=> infoWindow.open(map, marker) );
-
-          allMarkers.push({ marker, district, type, name, desc });
+      marker.addListener("click", ()=>{
+        if(activeInfoWindow){
+          activeInfoWindow.close();
         }
-      }catch(e){
-        console.error("KML 파싱 에러:", district, e);
-      }
+        infoWindow.open(map, marker);
+        activeInfoWindow = infoWindow;
+
+        marker.setMap(map); // 클릭해도 사라지지 않게
+      });
+
+      allMarkers.push({marker, district, type, name, desc});
     }
 
-    function wireUI(){
-      const districtSelect = document.getElementById("districtSelect");
-      const typeSelect = document.getElementById("typeSelect");
-      const searchInput = document.getElementById("searchInput");
-      const chipSection = document.getElementById("chipSection");
-      const chipsWrap = document.getElementById("typeChips");
+  }catch(e){
+    console.error("KML 로드 오류:", e);
+  }
+}
 
-      districtSelect.addEventListener("change", ()=>{
-        const v = districtSelect.value;
-        if(v==="ALL"){
-          typeSelect.disabled = true;
-          typeSelect.value = "ALL";
-          chipSection.style.display="none";
-          setActiveChip("ALL");
-        }else{
-          typeSelect.disabled = false;
-          chipSection.style.display="block";
-        }
-        applyFilter();
-      });
+// UI 필터
+function wireUI(){
+  const dSel = document.getElementById("districtSelect");
+  const tSel = document.getElementById("typeSelect");
+  const sInp = document.getElementById("searchInput");
 
-      typeSelect.addEventListener("change", ()=>{
-        setActiveChip(typeSelect.value);
-        applyFilter();
-      });
-
-      chipsWrap.addEventListener("click", (e)=>{
-        const chip = e.target.closest(".chip");
-        if(!chip) return;
-        const t = chip.dataset.type;
-        typeSelect.value = t;
-        setActiveChip(t);
-        applyFilter();
-      });
-
-      searchInput.addEventListener("input", ()=> applyFilter());
-
-      document.getElementById("resetBtn").addEventListener("click", ()=>{
-        districtSelect.value="ALL";
-        typeSelect.value="ALL";
-        typeSelect.disabled=true;
-        searchInput.value="";
-        chipSection.style.display="none";
-        setActiveChip("ALL");
-        applyFilter();
-      });
+  dSel.addEventListener("change", ()=>{
+    if(dSel.value==="ALL"){
+      tSel.disabled = true;
+      tSel.value="ALL";
+    }else{
+      tSel.disabled = false;
     }
+    applyFilter();
+  });
 
-    function setActiveChip(type){
-      document.querySelectorAll(".chip").forEach(c=>{
-        c.classList.toggle("active", c.dataset.type===type);
-      });
-    }
+  tSel.addEventListener("change", applyFilter);
+  sInp.addEventListener("input", applyFilter);
 
-    function applyFilter(){
-      const districtVal = document.getElementById("districtSelect").value;
-      const typeVal = document.getElementById("typeSelect").value;
-      const q = document.getElementById("searchInput").value.trim().toLowerCase();
+  document.getElementById("resetBtn").addEventListener("click", ()=>{
+    dSel.value="ALL";
+    tSel.value="ALL";
+    tSel.disabled=true;
+    sInp.value="";
+    applyFilter();
+  });
+}
 
-      allMarkers.forEach(({marker, district, type, name, desc})=>{
-        let visible = true;
+// 필터 적용
+function applyFilter(){
+  const dVal = districtSelect.value;
+  const tVal = typeSelect.value;
+  const q = searchInput.value.toLowerCase();
 
-        if(districtVal!=="ALL" && district!==districtVal) visible=false;
-        if(typeVal!=="ALL" && type!==typeVal) visible=false;
-        if(q){
-          const text = (name+" "+desc).toLowerCase();
-          if(!text.includes(q)) visible=false;
-        }
+  allMarkers.forEach(o=>{
+    let v = true;
 
-        marker.setMap(visible ? map : null);
-      });
-    }
-  </script>
+    if(dVal !== "ALL" && o.district !== dVal) v=false;
+    if(tVal !== "ALL" && o.type !== tVal) v=false;
 
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRFrDGLMi8UZgAoDITyJu694vKXdTglbU&callback=initMap" async defer></script>
+    if(q && !(o.name+o.desc).toLowerCase().includes(q)) v=false;
+
+    o.marker.setMap(v ? map : null);
+  });
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRFrDGLMi8UZgAoDITyJu694vKXdTglbU&callback=initMap" async defer></script>
 </body>
 </html>
