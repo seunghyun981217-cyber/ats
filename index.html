@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>ATS 스마트맵</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root{
+      --blue:#1976d2;
+      --bg:#f6f7f9;
+      --card:#ffffff;
+      --text:#111827;
+      --muted:#6b7280;
+      --border:#e5e7eb;
+      --radius:14px;
+    }
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      height:100vh;
+      overflow:hidden;
+    }
+    .app{
+      display:grid;
+      grid-template-columns: 320px 1fr;
+      height:100vh;
+      width:100vw;
+    }
+    aside{
+      background:var(--card);
+      border-right:1px solid var(--border);
+      display:flex;
+      flex-direction:column;
+      padding:14px;
+      gap:12px;
+    }
+    .brand{
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+      padding:6px 6px 10px;
+      border-bottom:1px solid var(--border);
+    }
+    .brand h1{
+      margin:0;
+      font-size:20px;
+      font-weight:800;
+      letter-spacing:-0.3px;
+      color:var(--blue);
+    }
+    .brand p{
+      margin:0;
+      font-size:12.5px;
+      color:var(--muted);
+      line-height:1.35;
+    }
+    .section{
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+    }
+    .section label{
+      font-size:12px;
+      font-weight:700;
+      color:#374151;
+      display:flex;
+      align-items:center;
+      gap:6px;
+    }
+    select, input[type="search"]{
+      width:100%;
+      padding:9px 10px;
+      border:1px solid var(--border);
+      border-radius:10px;
+      font-size:14px;
+      background:#fff;
+      outline:none;
+    }
+    select:disabled{
+      background:#f3f4f6;
+      color:#9ca3af;
+    }
+    .chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap:6px;
+    }
+    .chip{
+      padding:6px 9px;
+      border:1px solid var(--border);
+      border-radius:999px;
+      font-size:12px;
+      cursor:pointer;
+      background:#fff;
+      color:#374151;
+      user-select:none;
+      transition:all .15s ease;
+    }
+    .chip.active{
+      background:var(--blue);
+      color:#fff;
+      border-color:var(--blue);
+    }
+    .legend{
+      margin-top:auto;
+      padding-top:10px;
+      border-top:1px solid var(--border);
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+      font-size:12px;
+      color:var(--muted);
+    }
+    .legend-row{
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+    .dot{
+      width:10px;height:10px;border-radius:50%;
+      border:1.5px solid #fff; box-shadow:0 0 0 1px rgba(0,0,0,.08);
+    }
+    .btn{
+      width:100%;
+      padding:9px 10px;
+      border:none;
+      border-radius:10px;
+      background:#111827;
+      color:#fff;
+      font-size:14px;
+      font-weight:700;
+      cursor:pointer;
+    }
+    .helper{
+      font-size:12px;color:var(--muted);line-height:1.35;
+    }
+
+    main{
+      position:relative;
+      padding:10px;
+    }
+    #map{
+      height:100%;
+      width:100%;
+      border-radius:16px;
+      box-shadow:0 8px 24px rgba(0,0,0,.08);
+      overflow:hidden;
+      background:#e5e7eb;
+    }
+    .loading{
+      position:absolute; inset:10px;
+      background:rgba(255,255,255,.85);
+      border-radius:16px;
+      display:flex; align-items:center; justify-content:center;
+      font-weight:700; color:#374151;
+      backdrop-filter: blur(2px);
+      z-index:5;
+    }
+    .loading.hidden{ display:none; }
+
+    @media (max-width: 900px){
+      .app{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+      }
+      aside{
+        border-right:none;
+        border-bottom:1px solid var(--border);
+        flex-direction:row;
+        flex-wrap:wrap;
+        align-items:flex-start;
+        gap:10px;
+      }
+      .brand{ width:100%; }
+      .section{ width:calc(50% - 6px); }
+      .section.full{ width:100%; }
+      .chips{ width:100%; }
+      .legend{ width:100%; margin-top:0; }
+      main{ padding:8px; }
+      .loading{ inset:8px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside>
+      <div class="brand">
+        <h1>ATS 스마트맵</h1>
+        <p>
+          서울 이동보조기기 사용자들을 위한<br/>
+          수리 · 충전 · 공기주입 · 대여 · 센터 정보를 한눈에.
+        </p>
+      </div>
+
+      <div class="section full">
+        <label for="searchInput">🔎 검색</label>
+        <input id="searchInput" type="search" placeholder="장소명/설명에서 검색" />
+        <div class="helper">검색어가 포함된 마커만 남겨서 보여줘요.</div>
+      </div>
+
+      <div class="section">
+        <label for="districtSelect">📍 구 선택</label>
+        <select id="districtSelect">
+          <option value="ALL">전체 보기</option>
+          <option value="광진구">광진구</option>
+          <option value="성동구">성동구</option>
+          <option value="강남구">강남구</option>
+          <option value="서초구">서초구</option>
+          <option value="송파구">송파구</option>
+          <option value="강동구">강동구</option>
+        </select>
+      </div>
+
+      <div class="section">
+        <label for="typeSelect">🧩 유형 선택</label>
+        <select id="typeSelect" disabled>
+          <option value="ALL">모든 유형</option>
+          <option value="수리">수리</option>
+          <option value="충전">충전</option>
+          <option value="공기">공기주입</option>
+          <option value="대여">대여</option>
+          <option value="센터">센터</option>
+          <option value="판매">판매</option>
+        </select>
+      </div>
+
+      <div class="section full" id="chipSection" style="display:none;">
+        <label>빠른 유형</label>
+        <div class="chips" id="typeChips">
+          <div class="chip active" data-type="ALL">전체</div>
+          <div class="chip" data-type="수리">🔧 수리</div>
+          <div class="chip" data-type="충전">⚡ 충전</div>
+          <div class="chip" data-type="공기">💨 공기</div>
+          <div class="chip" data-type="대여">♿ 대여</div>
+          <div class="chip" data-type="센터">🏢 센터</div>
+          <div class="chip" data-type="판매">🛒 판매</div>
+        </div>
+      </div>
+
+      <button class="btn" id="resetBtn">필터 초기화</button>
+
+      <div class="legend" id="legend"></div>
+    </aside>
+
+    <main>
+      <div id="map"></div>
+      <div class="loading" id="loading">데이터 불러오는 중…</div>
+    </main>
+  </div>
+
+  <script>
+    const DISTRICT_COLORS = {
+      "광진구": "#F44336",
+      "성동구": "#9C27B0",
+      "강남구": "#2196F3",
+      "서초구": "#4CAF50",
+      "송파구": "#FFC107",
+      "강동구": "#FF5722"
+    };
+
+    const DISTRICT_KMLS = {
+      "광진구": "kml/GwangsungATSMAPS.kml",
+      "성동구": "kml/GwangsungATSMAPS.kml",
+      "강남구": "kml/KangnamseochoATSMAPS.kml",
+      "서초구": "kml/KangnamseochoATSMAPS.kml",
+      "송파구": "kml/GangdongsongpaATSMAPS.kml",
+      "강동구": "kml/GangdongsongpaATSMAPS.kml"
+    };
+
+    const MINIMAL_STYLE = [
+      { featureType:"poi", stylers:[{visibility:"off"}] },
+      { featureType:"transit", stylers:[{visibility:"off"}] },
+      { featureType:"administrative", elementType:"labels", stylers:[{visibility:"off"}] },
+      { featureType:"road", elementType:"labels.icon", stylers:[{visibility:"off"}] },
+      { featureType:"poi.park", stylers:[{visibility:"simplified"}] }
+    ];
+
+    let map;
+    let allMarkers = []; // { marker, district, type, name, desc }
+
+    function createCircleIcon(color){
+      return {
+        path: google.maps.SymbolPath.CIRCLE,
+        fillColor: color,
+        fillOpacity: 1,
+        strokeColor: "#ffffff",
+        strokeWeight: 1.5,
+        scale: 8
+      };
+    }
+
+    function detectType(name, desc){
+      const text = ((name||"")+" "+(desc||"")).toLowerCase();
+      if (text.includes("센터") || text.includes("보조기기센터")) return "센터";
+      if (text.includes("판매") || text.includes("매장")) return "판매";
+      if (text.includes("수리")) return "수리";
+      if (text.includes("충전")) return "충전";
+      if (text.includes("공기") || text.includes("타이어") || text.includes("바퀴")) return "공기";
+      if (text.includes("대여")) return "대여";
+      return "기타";
+    }
+
+    function initMap(){
+      map = new google.maps.Map(document.getElementById("map"), {
+        center:{lat:37.54, lng:127.07},
+        zoom:12,
+        styles: MINIMAL_STYLE,
+        mapTypeControl:false,
+        streetViewControl:false
+      });
+
+      buildLegend();
+      wireUI();
+
+      loadAllDistricts().finally(()=> {
+        document.getElementById("loading").classList.add("hidden");
+        applyFilter();
+      });
+    }
+
+    function buildLegend(){
+      const legend = document.getElementById("legend");
+      legend.innerHTML = "<div style='font-weight:700;color:#374151;margin-bottom:4px;'>구별 색상</div>";
+      Object.entries(DISTRICT_COLORS).forEach(([district,color])=>{
+        const row = document.createElement("div");
+        row.className="legend-row";
+        row.innerHTML = `<span class="dot" style="background:${color}"></span><span>${district}</span>`;
+        legend.appendChild(row);
+      });
+    }
+
+    async function loadAllDistricts(){
+      const districts = Object.keys(DISTRICT_KMLS);
+      for (const district of districts){
+        await loadKmlForDistrict(district, DISTRICT_KMLS[district]);
+      }
+    }
+
+    async function loadKmlForDistrict(district, kmlUrl){
+      try{
+        const res = await fetch(kmlUrl);
+        if(!res.ok){ console.warn("KML 로드 실패:", district, kmlUrl); return; }
+        const text = await res.text();
+        const xml = new DOMParser().parseFromString(text, "text/xml");
+        const placemarks = xml.getElementsByTagName("Placemark");
+        const color = DISTRICT_COLORS[district] || "#4285F4";
+
+        for (let i=0;i<placemarks.length;i++){
+          const pm = placemarks[i];
+          const name = pm.getElementsByTagName("name")[0]?.textContent || "";
+          const desc = pm.getElementsByTagName("description")[0]?.textContent || "";
+          const coords = pm.getElementsByTagName("coordinates")[0]?.textContent?.trim() || "";
+          if(!coords) continue;
+          const [lngS, latS] = coords.split(",");
+          const lat = parseFloat(latS), lng = parseFloat(lngS);
+          if(isNaN(lat)||isNaN(lng)) continue;
+
+          const type = detectType(name, desc);
+
+          const marker = new google.maps.Marker({
+            position:{lat,lng},
+            map,
+            title:name,
+            icon:createCircleIcon(color)
+          });
+
+          const infoHtml = `
+            <div style="min-width:220px;font-size:13px;">
+              <div style="font-weight:700;margin-bottom:4px;">${name || "이름 없음"}</div>
+              <div style="white-space:pre-wrap;">${desc || ""}</div>
+              <div style="margin-top:6px;font-size:11px;color:#666;">구: ${district} / 유형: ${type}</div>
+            </div>`;
+          const infoWindow = new google.maps.InfoWindow({content:infoHtml});
+          marker.addListener("click", ()=> infoWindow.open(map, marker) );
+
+          allMarkers.push({ marker, district, type, name, desc });
+        }
+      }catch(e){
+        console.error("KML 파싱 에러:", district, e);
+      }
+    }
+
+    function wireUI(){
+      const districtSelect = document.getElementById("districtSelect");
+      const typeSelect = document.getElementById("typeSelect");
+      const searchInput = document.getElementById("searchInput");
+      const chipSection = document.getElementById("chipSection");
+      const chipsWrap = document.getElementById("typeChips");
+
+      districtSelect.addEventListener("change", ()=>{
+        const v = districtSelect.value;
+        if(v==="ALL"){
+          typeSelect.disabled = true;
+          typeSelect.value = "ALL";
+          chipSection.style.display="none";
+          setActiveChip("ALL");
+        }else{
+          typeSelect.disabled = false;
+          chipSection.style.display="block";
+        }
+        applyFilter();
+      });
+
+      typeSelect.addEventListener("change", ()=>{
+        setActiveChip(typeSelect.value);
+        applyFilter();
+      });
+
+      chipsWrap.addEventListener("click", (e)=>{
+        const chip = e.target.closest(".chip");
+        if(!chip) return;
+        const t = chip.dataset.type;
+        typeSelect.value = t;
+        setActiveChip(t);
+        applyFilter();
+      });
+
+      searchInput.addEventListener("input", ()=> applyFilter());
+
+      document.getElementById("resetBtn").addEventListener("click", ()=>{
+        districtSelect.value="ALL";
+        typeSelect.value="ALL";
+        typeSelect.disabled=true;
+        searchInput.value="";
+        chipSection.style.display="none";
+        setActiveChip("ALL");
+        applyFilter();
+      });
+    }
+
+    function setActiveChip(type){
+      document.querySelectorAll(".chip").forEach(c=>{
+        c.classList.toggle("active", c.dataset.type===type);
+      });
+    }
+
+    function applyFilter(){
+      const districtVal = document.getElementById("districtSelect").value;
+      const typeVal = document.getElementById("typeSelect").value;
+      const q = document.getElementById("searchInput").value.trim().toLowerCase();
+
+      allMarkers.forEach(({marker, district, type, name, desc})=>{
+        let visible = true;
+
+        if(districtVal!=="ALL" && district!==districtVal) visible=false;
+        if(typeVal!=="ALL" && type!==typeVal) visible=false;
+        if(q){
+          const text = (name+" "+desc).toLowerCase();
+          if(!text.includes(q)) visible=false;
+        }
+
+        marker.setMap(visible ? map : null);
+      });
+    }
+  </script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</body>
+</html>
