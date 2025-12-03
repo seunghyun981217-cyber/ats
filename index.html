@@ -4,12 +4,32 @@
 <meta charset="utf-8" />
 <title>ATS 스마트맵</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+
 <style>
-body{margin:0;display:flex;height:100vh;font-family:system-ui,sans-serif}
-.panel{width:360px;border-right:1px solid #ddd;padding:12px;overflow-y:auto}
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  font-family:system-ui,sans-serif;
+}
+.panel{
+  width:360px;
+  border-right:1px solid #ddd;
+  padding:12px;
+  overflow-y:auto;
+}
 #map{flex:1}
-.result{padding:6px;border-bottom:1px dashed #ddd;cursor:pointer}
+.result{
+  padding:6px;
+  border-bottom:1px dashed #ddd;
+  cursor:pointer
+}
 .result:hover{background:#eef2ff}
+@media(max-width:768px){
+  body{flex-direction:column}
+  .panel{width:100%;height:42vh}
+  #map{height:58vh}
+}
 </style>
 </head>
 
@@ -18,102 +38,124 @@ body{margin:0;display:flex;height:100vh;font-family:system-ui,sans-serif}
 <div class="panel">
   <h3>ATS 스마트맵</h3>
 
-  <select id="district">
-    <option value="ALL">전체 구</option>
-  </select><br><br>
+  <input id="search" placeholder="이름 / 설명 검색" style="width:100%;margin-bottom:6px;padding:6px">
 
-  <select id="type">
+  <select id="district" style="width:100%;margin-bottom:6px">
+    <option value="ALL">전체 구</option>
+  </select>
+
+  <select id="type" style="width:100%;margin-bottom:6px">
     <option value="ALL">전체 유형</option>
   </select>
 
   <h4>결과 목록</h4>
-  <div id="list">조건을 선택하세요</div>
+  <div id="list">불러오는 중…</div>
 </div>
 
 <div id="map"></div>
 
 <script>
-const PLACES = [
-  {
-    name:"송파구립장애인복지관",
-    district:"송파구",
-    type:"휠체어 대여소",
-    lat:37.4958,
-    lng:127.1234,
-    description:"무료 휠체어 대여 가능"
-  },
-  {
-    name:"강동구청 충전소",
-    district:"강동구",
-    type:"전동휠체어 충전소",
-    lat:37.5301,
-    lng:127.1238,
-    description:"1층 민원실 앞"
-  }
-];
+let PLACES=[], markers=[], map, info;
 
-let map, markers=[], info;
+// ✅ 유형별 마커 색상
+const TYPE_COLOR={
+  "수리 지정업체":"#E53935",
+  "전동휠체어 충전소":"#1E88E5",
+  "휠체어 대여소":"#43A047",
+  "휴대용 충전기 대여소":"#F9A825"
+};
+
+fetch('ats_places.csv')
+.then(r=>r.text())
+.then(t=>{
+  t.trim().split(/\n/).slice(1).forEach(r=>{
+    if(!r) return;
+    const [name,district,type,lat,lng,description]=r.split(',');
+    PLACES.push({name,district,type,lat:+lat,lng:+lng,description});
+  });
+  initMap();
+});
 
 function initMap(){
   map=new google.maps.Map(document.getElementById("map"),{
-    center:{lat:37.51,lng:127.1},zoom:12
+    center:{lat:37.52,lng:127.08},
+    zoom:12,
+    mapTypeControl:false
   });
   info=new google.maps.InfoWindow();
-  initFilter();
+  initFilters();
   createMarkers();
-  filter();
+  applyFilter();
 }
 
-function initFilter(){
+function initFilters(){
   const dSel=document.getElementById("district");
   const tSel=document.getElementById("type");
-  [...new Set(PLACES.map(p=>p.district))].forEach(d=>{
-    dSel.innerHTML+=`<option>${d}</option>`;
-  });
-  [...new Set(PLACES.map(p=>p.type))].forEach(t=>{
-    tSel.innerHTML+=`<option>${t}</option>`;
-  });
-  dSel.onchange=tSel.onchange=filter;
+
+  [...new Set(PLACES.map(p=>p.district))].forEach(d=>dSel.innerHTML+=`<option>${d}</option>`);
+  [...new Set(PLACES.map(p=>p.type))].forEach(t=>tSel.innerHTML+=`<option>${t}</option>`);
+
+  document.getElementById("search").oninput=applyFilter;
+  dSel.onchange=tSel.onchange=applyFilter;
 }
 
 function createMarkers(){
   PLACES.forEach(p=>{
     const m=new google.maps.Marker({
-      position:{lat:p.lat,lng:p.lng},map
-    });
+      position:{lat:p.lat,lng:p.lng},
+      map,
+      icon:{
+        path:google.maps.SymbolPath.CIRCLE,
+        scale:7,
+        fillColor:TYPE_COLOR[p.type]||"#666",
+        fillOpacity:0.9,
+        strokeColor:"#fff",
+        strokeWeight:1
+      }
+    );
     m.place=p;
-    m.addListener("click",()=>show(m));
+    m.onclick=()=>showInfo(m);
     markers.push(m);
   });
 }
 
-function show(m){
+function showInfo(m){
   const p=m.place;
-  info.setContent(`<b>${p.name}</b><br>${p.district} · ${p.type}<br>${p.description}`);
+  info.setContent(`
+    <b>${p.name}</b><br>
+    ${p.district} · ${p.type}<br><br>
+    ${p.description||""}<br><br>
+    <a target="_blank"
+      href="https://www.google.com/maps/dir/?api=1&destination=${p.lat},${p.lng}">
+      🚗 길찾기
+    </a>
+  `);
   info.open(map,m);
 }
 
-function filter(){
+function applyFilter(){
   const d=document.getElementById("district").value;
   const t=document.getElementById("type").value;
+  const q=document.getElementById("search").value.toLowerCase();
   const list=document.getElementById("list");
   list.innerHTML="";
+
   markers.forEach(m=>{
     const p=m.place;
-    const ok=(d==="ALL"||p.district===d)&&(t==="ALL"||p.type===t);
+    const ok =
+      (d==="ALL"||p.district===d) &&
+      (t==="ALL"||p.type===t) &&
+      (!q||p.name.toLowerCase().includes(q)||(p.description||"").toLowerCase().includes(q));
     m.setVisible(ok);
     if(ok){
       const div=document.createElement("div");
       div.className="result";
-      div.innerText=p.name;
-      div.onclick=()=>{
-        map.panTo({lat:p.lat,lng:p.lng});
-        map.setZoom(15);
-        show(m);
-      };
+      div.innerHTML=`<b>${p.name}</b><br>${p.district} · ${p.type}`;
+      div.onclick=()=>{map.panTo({lat:p.lat,lng:p.lng});map.setZoom(15);showInfo(m);}
       list.appendChild(div);
     }
   });
+
   if(!list.innerHTML) list.innerText="결과 없음";
 }
 </script>
@@ -121,4 +163,3 @@ function filter(){
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRFrDGLMi8UZgAoDITyJu694vKXdTglbU&callback=initMap" async defer></script>
 </body>
 </html>
-
