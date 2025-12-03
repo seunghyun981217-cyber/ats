@@ -1,320 +1,124 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8" />
-  <title>ATS 스마트맵</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, "Noto Sans KR", sans-serif;
-      display: flex;
-      height: 100vh;
-    }
-    .panel {
-      width: 340px;
-      padding: 14px;
-      border-right: 1px solid #e5e7eb;
-      background: #ffffff;
-      overflow-y: auto;
-      box-sizing: border-box;
-    }
-    .panel h3 {
-      margin: 0 0 10px;
-      font-size: 18px;
-      font-weight: 800;
-    }
-    .label {
-      font-size: 13px;
-      margin: 10px 0 4px;
-      font-weight: 600;
-    }
-    select, input {
-      width: 100%;
-      padding: 6px 8px;
-      margin-bottom: 6px;
-      box-sizing: border-box;
-      font-size: 13px;
-    }
-    #resultList {
-      margin-top: 8px;
-      border-top: 1px solid #eee;
-      padding-top: 6px;
-      font-size: 12px;
-      max-height: 260px;
-      overflow-y: auto;
-    }
-    .result-item {
-      padding: 6px 4px;
-      border-bottom: 1px dashed #e5e7eb;
-      cursor: pointer;
-    }
-    .result-item:hover {
-      background: #f3f4f6;
-    }
-    #map {
-      flex: 1;
-    }
-  </style>
+<meta charset="utf-8" />
+<title>ATS 스마트맵</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+body{margin:0;display:flex;height:100vh;font-family:system-ui,sans-serif}
+.panel{width:360px;border-right:1px solid #ddd;padding:12px;overflow-y:auto}
+#map{flex:1}
+.result{padding:6px;border-bottom:1px dashed #ddd;cursor:pointer}
+.result:hover{background:#eef2ff}
+</style>
 </head>
 
 <body>
-  <div class="panel">
-    <h3>ATS 스마트맵</h3>
 
-    <div class="label">구 선택</div>
-    <select id="districtSelect">
-      <option value="ALL">전체 구</option>
-    </select>
+<div class="panel">
+  <h3>ATS 스마트맵</h3>
 
-    <div class="label">유형 선택</div>
-    <select id="typeSelect">
-      <option value="ALL">전체 유형</option>
-    </select>
+  <select id="district">
+    <option value="ALL">전체 구</option>
+  </select><br><br>
 
-    <div class="label">검색 (이름/설명)</div>
-    <input id="searchInput" type="text" placeholder="예: 송파, 대여, 충전소…" />
+  <select id="type">
+    <option value="ALL">전체 유형</option>
+  </select>
 
-    <div class="label">결과 목록</div>
-    <div id="resultList">조건을 선택하거나 검색해 주세요.</div>
-  </div>
+  <h4>결과 목록</h4>
+  <div id="list">조건을 선택하세요</div>
+</div>
 
-  <div id="map"></div>
+<div id="map"></div>
 
-  <script>
-    // ✅ 여기에 네가 사용 중인 KML 파일들을 나열해줘
-    //   /ats/kml/ 폴더 기준 경로
-    const KML_URLS = [
-      "kml/GwangsungATSMAPS.kml",
-      "kml/KangnamseochoATSMAPS.kml",
-      "kml/GangdongsongpaATSMAPS.kml",
-      // 필요하면 여기 아래에 추가:
-      // "kml/JungguWheelchairCharge.kml",
-      // "kml/GwanakWheelchairCharge.kml"
-    ];
+<script>
+const PLACES = [
+  {
+    name:"송파구립장애인복지관",
+    district:"송파구",
+    type:"휠체어 대여소",
+    lat:37.4958,
+    lng:127.1234,
+    description:"무료 휠체어 대여 가능"
+  },
+  {
+    name:"강동구청 충전소",
+    district:"강동구",
+    type:"전동휠체어 충전소",
+    lat:37.5301,
+    lng:127.1238,
+    description:"1층 민원실 앞"
+  }
+];
 
-    let map, infoWindow;
-    let PLACES = [];   // { name, lat, lng, type, district, description, marker }
-    let markers = [];
-    let selectedDistrict = "ALL";
-    let selectedType = "ALL";
+let map, markers=[], info;
 
-    // ✅ KML 파싱용 함수
-    function parseKmlText(text) {
-      const parser = new DOMParser();
-      const xml = parser.parseFromString(text, "text/xml");
-      const placemarks = xml.getElementsByTagName("Placemark");
-      const places = [];
+function initMap(){
+  map=new google.maps.Map(document.getElementById("map"),{
+    center:{lat:37.51,lng:127.1},zoom:12
+  });
+  info=new google.maps.InfoWindow();
+  initFilter();
+  createMarkers();
+  filter();
+}
 
-      for (let i = 0; i < placemarks.length; i++) {
-        const pm = placemarks[i];
-        const name = pm.getElementsByTagName("name")[0]?.textContent.trim() || "";
-        const descNode = pm.getElementsByTagName("description")[0];
-        const description = descNode ? descNode.textContent.trim() : "";
+function initFilter(){
+  const dSel=document.getElementById("district");
+  const tSel=document.getElementById("type");
+  [...new Set(PLACES.map(p=>p.district))].forEach(d=>{
+    dSel.innerHTML+=`<option>${d}</option>`;
+  });
+  [...new Set(PLACES.map(p=>p.type))].forEach(t=>{
+    tSel.innerHTML+=`<option>${t}</option>`;
+  });
+  dSel.onchange=tSel.onchange=filter;
+}
 
-        const coordNode = pm.getElementsByTagName("coordinates")[0];
-        if (!coordNode) continue;
-        const coordText = coordNode.textContent.trim();
-        const parts = coordText.split(",");
-        if (parts.length < 2) continue;
-        const lng = parseFloat(parts[0]);
-        const lat = parseFloat(parts[1]);
-        if (!Number.isFinite(lat) || !Number.isFinite(lng)) continue;
+function createMarkers(){
+  PLACES.forEach(p=>{
+    const m=new google.maps.Marker({
+      position:{lat:p.lat,lng:p.lng},map
+    });
+    m.place=p;
+    m.addListener("click",()=>show(m));
+    markers.push(m);
+  });
+}
 
-        let district = "";
-        let type = "";
+function show(m){
+  const p=m.place;
+  info.setContent(`<b>${p.name}</b><br>${p.district} · ${p.type}<br>${p.description}`);
+  info.open(map,m);
+}
 
-        const datas = pm.getElementsByTagName("Data");
-        for (let j = 0; j < datas.length; j++) {
-          const d = datas[j];
-          const key = d.getAttribute("name");
-          const valNode = d.getElementsByTagName("value")[0];
-          const val = valNode ? valNode.textContent.trim() : "";
-          if (key === "district" || key === "구") district = val;
-          if (key === "type" || key === "유형") type = val;
-        }
-
-        places.push({ name, lat, lng, type, district, description });
-      }
-      return places;
+function filter(){
+  const d=document.getElementById("district").value;
+  const t=document.getElementById("type").value;
+  const list=document.getElementById("list");
+  list.innerHTML="";
+  markers.forEach(m=>{
+    const p=m.place;
+    const ok=(d==="ALL"||p.district===d)&&(t==="ALL"||p.type===t);
+    m.setVisible(ok);
+    if(ok){
+      const div=document.createElement("div");
+      div.className="result";
+      div.innerText=p.name;
+      div.onclick=()=>{
+        map.panTo({lat:p.lat,lng:p.lng});
+        map.setZoom(15);
+        show(m);
+      };
+      list.appendChild(div);
     }
+  });
+  if(!list.innerHTML) list.innerText="결과 없음";
+}
+</script>
 
-    // ✅ 자동 색상 생성 (구별 색상)
-    function colorFromText(text) {
-      if (!text) return "#999999";
-      let hash = 0;
-      for (let i = 0; i < text.length; i++) {
-        hash = text.charCodeAt(i) + ((hash << 5) - hash);
-      }
-      const hue = Math.abs(hash) % 360;
-      return `hsl(${hue}, 65%, 50%)`;
-    }
-
-    function initMap() {
-      map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: 37.52, lng: 127.08 },
-        zoom: 12,
-        mapTypeControl: false,
-        streetViewControl: false,
-      });
-      infoWindow = new google.maps.InfoWindow();
-
-      // 모든 KML 로드
-      Promise.all(
-        KML_URLS.map(url =>
-          fetch(url + "?v=" + Date.now()).then(res => res.text())
-        )
-      ).then(texts => {
-        texts.forEach(t => {
-          const places = parseKmlText(t);
-          PLACES = PLACES.concat(places);
-        });
-        createMarkers();
-        initSelectors();
-        applyFilters();
-      }).catch(err => {
-        console.error("KML 로딩 오류:", err);
-        document.getElementById("resultList").textContent =
-          "KML 데이터를 불러오지 못했습니다. 경로나 파일명을 확인해주세요.";
-      });
-
-      // 검색 입력 이벤트
-      document.getElementById("searchInput").addEventListener("input", () => {
-        applyFilters();
-      });
-    }
-
-    function createMarkers() {
-      markers.forEach(m => m.setMap(null));
-      markers = [];
-
-      PLACES.forEach(p => {
-        const marker = new google.maps.Marker({
-          position: { lat: p.lat, lng: p.lng },
-          map,
-          icon: {
-            path: google.maps.SymbolPath.CIRCLE,
-            scale: 6,
-            fillColor: colorFromText(p.district),
-            fillOpacity: 0.95,
-            strokeColor: "#ffffff",
-            strokeWeight: 1,
-          },
-          title: p.name,
-        });
-        marker.placeData = p;
-        p.marker = marker;
-
-        marker.addListener("click", () => {
-          openInfo(marker);
-        });
-
-        markers.push(marker);
-      });
-    }
-
-    function openInfo(marker) {
-      const p = marker.placeData;
-      const html = `
-        <div style="font-size:13px; line-height:1.4; max-width:260px;">
-          <div style="font-weight:700; margin-bottom:4px;">${p.name}</div>
-          <div style="font-size:11px; color:#555; margin-bottom:4px;">
-            ${p.district || ""} ${p.type ? " · " + p.type : ""}
-          </div>
-          <div style="font-size:12px; white-space:pre-line;">${p.description || ""}</div>
-        </div>
-      `;
-      infoWindow.setContent(html);
-      infoWindow.open(map, marker);
-    }
-
-    function initSelectors() {
-      const dSel = document.getElementById("districtSelect");
-      const tSel = document.getElementById("typeSelect");
-
-      const districtSet = new Set();
-      const typeSet = new Set();
-
-      PLACES.forEach(p => {
-        if (p.district) districtSet.add(p.district);
-        if (p.type) typeSet.add(p.type);
-      });
-
-      [...districtSet].sort().forEach(d => {
-        const opt = document.createElement("option");
-        opt.value = d;
-        opt.textContent = d;
-        dSel.appendChild(opt);
-      });
-
-      [...typeSet].sort().forEach(t => {
-        const opt = document.createElement("option");
-        opt.value = t;
-        opt.textContent = t;
-        tSel.appendChild(opt);
-      });
-
-      dSel.addEventListener("change", e => {
-        selectedDistrict = e.target.value;
-        applyFilters();
-      });
-
-      tSel.addEventListener("change", e => {
-        selectedType = e.target.value;
-        applyFilters();
-      });
-    }
-
-    function applyFilters() {
-      const q = document.getElementById("searchInput").value.trim().toLowerCase();
-      const visiblePlaces = [];
-
-      markers.forEach(m => {
-        const p = m.placeData;
-        const okDistrict =
-          selectedDistrict === "ALL" || p.district === selectedDistrict;
-        const okType =
-          selectedType === "ALL" || p.type === selectedType;
-        const okSearch =
-          !q ||
-          p.name.toLowerCase().includes(q) ||
-          (p.description && p.description.toLowerCase().includes(q));
-
-        const visible = okDistrict && okType && okSearch;
-        m.setVisible(visible);
-        if (visible) visiblePlaces.push(p);
-      });
-
-      updateResultList(visiblePlaces);
-    }
-
-    function updateResultList(places) {
-      const list = document.getElementById("resultList");
-      list.innerHTML = "";
-
-      if (!places.length) {
-        list.textContent = "해당 조건에 맞는 결과가 없습니다.";
-        return;
-      }
-
-      places.forEach(p => {
-        const div = document.createElement("div");
-        div.className = "result-item";
-        div.innerHTML = `
-          <strong>${p.name}</strong><br/>
-          <span style="color:#555;">${p.district || ""} · ${p.type || ""}</span>
-        `;
-        div.onclick = () => {
-          map.panTo({ lat: p.lat, lng: p.lng });
-          map.setZoom(15);
-          if (p.marker) openInfo(p.marker);
-        };
-        list.appendChild(div);
-      });
-    }
-  </script>
-
-  <!-- 🔑 여기 YOUR_GOOGLE_MAPS_API_KEY 를 네 키로 교체 -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRFrDGLMi8UZgAoDITyJu694vKXdTglbU&callback=initMap&language=ko" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRFrDGLMi8UZgAoDITyJu694vKXdTglbU&callback=initMap" async defer></script>
 </body>
 </html>
+
