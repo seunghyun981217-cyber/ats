@@ -6,24 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <style>
-body{
-  margin:0;
-  height:100vh;
-  display:flex;
-  font-family:system-ui,sans-serif;
-}
-.panel{
-  width:360px;
-  border-right:1px solid #ddd;
-  padding:12px;
-  overflow-y:auto;
-}
+body{margin:0;height:100vh;display:flex;font-family:system-ui,sans-serif}
+.panel{width:360px;border-right:1px solid #ddd;padding:12px;overflow-y:auto}
 #map{flex:1}
-.result{
-  padding:6px;
-  border-bottom:1px dashed #ddd;
-  cursor:pointer
-}
+.result{padding:6px;border-bottom:1px dashed #ddd;cursor:pointer}
 .result:hover{background:#eef2ff}
 @media(max-width:768px){
   body{flex-direction:column}
@@ -32,13 +18,13 @@ body{
 }
 </style>
 </head>
-
 <body>
 
 <div class="panel">
   <h3>ATS 스마트맵</h3>
 
-  <input id="search" placeholder="이름 / 설명 검색" style="width:100%;margin-bottom:6px;padding:6px">
+  <input id="search" placeholder="이름 / 설명 검색"
+         style="width:100%;margin-bottom:6px;padding:6px">
 
   <select id="district" style="width:100%;margin-bottom:6px">
     <option value="ALL">전체 구</option>
@@ -57,7 +43,6 @@ body{
 <script>
 let PLACES=[], markers=[], map, info;
 
-// ✅ 유형별 마커 색상
 const TYPE_COLOR={
   "수리 지정업체":"#E53935",
   "전동휠체어 충전소":"#1E88E5",
@@ -65,34 +50,7 @@ const TYPE_COLOR={
   "휴대용 충전기 대여소":"#F9A825"
 };
 
-fetch('ats_places.csv')
-  .then(r => r.text())
-  .then(t => {
-    const rows = t.trim().split(/\n/).slice(1);
-    rows.forEach(r => {
-      if (!r) return;
-      const [name,district,type,lat,lng,description] = r.split(',');
-      PLACES.push({
-        name,
-        district,
-        type,
-        lat: +lat,
-        lng: +lng,
-        description
-      });
-    });
-
-    // ✅ 여기서 map 초기화
-    if (window.google && window.google.maps) {
-      initMap();
-    } else {
-      console.error("Google Maps API 아직 준비 안 됨");
-    }
-  })
-  .catch(e => {
-    console.error("CSV 로드 실패", e);
-  });
-
+/* ✅ 구글이 이 함수만 직접 호출 */
 function initMap(){
   map=new google.maps.Map(document.getElementById("map"),{
     center:{lat:37.52,lng:127.08},
@@ -100,17 +58,45 @@ function initMap(){
     mapTypeControl:false
   });
   info=new google.maps.InfoWindow();
-  initFilters();
-  createMarkers();
-  applyFilter();
+
+  fetch('ats_places.csv')
+    .then(r=>{
+      if(!r.ok) throw new Error("CSV not found");
+      return r.text();
+    })
+    .then(t=>{
+      const rows=t.trim().split(/\n/).slice(1);
+      rows.forEach(r=>{
+        if(!r) return;
+        const [name,district,type,lat,lng,description]=r.split(',');
+        PLACES.push({
+          name,district,type,
+          lat:+lat,lng:+lng,
+          description
+        });
+      });
+
+      initFilters();
+      createMarkers();
+      applyFilter();
+    })
+    .catch(e=>{
+      document.getElementById("list").innerText =
+        "CSV 로드 실패 (파일 경로 확인)";
+      console.error(e);
+    });
 }
 
 function initFilters(){
   const dSel=document.getElementById("district");
   const tSel=document.getElementById("type");
 
-  [...new Set(PLACES.map(p=>p.district))].forEach(d=>dSel.innerHTML+=`<option>${d}</option>`);
-  [...new Set(PLACES.map(p=>p.type))].forEach(t=>tSel.innerHTML+=`<option>${t}</option>`);
+  [...new Set(PLACES.map(p=>p.district))].forEach(
+    d=>dSel.innerHTML+=`<option>${d}</option>`
+  );
+  [...new Set(PLACES.map(p=>p.type))].forEach(
+    t=>tSel.innerHTML+=`<option>${t}</option>`
+  );
 
   document.getElementById("search").oninput=applyFilter;
   dSel.onchange=tSel.onchange=applyFilter;
@@ -129,9 +115,9 @@ function createMarkers(){
         strokeColor:"#fff",
         strokeWeight:1
       }
-    );
+    });
     m.place=p;
-    m.onclick=()=>showInfo(m);
+    m.addListener("click",()=>showInfo(m));
     markers.push(m);
   });
 }
@@ -143,8 +129,8 @@ function showInfo(m){
     ${p.district} · ${p.type}<br><br>
     ${p.description||""}<br><br>
     <a target="_blank"
-      href="https://www.google.com/maps/dir/?api=1&destination=${p.lat},${p.lng}">
-      🚗 길찾기
+       href="https://www.google.com/maps/dir/?api=1&destination=${p.lat},${p.lng}">
+       🚗 길찾기
     </a>
   `);
   info.open(map,m);
@@ -163,12 +149,17 @@ function applyFilter(){
       (d==="ALL"||p.district===d) &&
       (t==="ALL"||p.type===t) &&
       (!q||p.name.toLowerCase().includes(q)||(p.description||"").toLowerCase().includes(q));
+
     m.setVisible(ok);
     if(ok){
       const div=document.createElement("div");
       div.className="result";
       div.innerHTML=`<b>${p.name}</b><br>${p.district} · ${p.type}`;
-      div.onclick=()=>{map.panTo({lat:p.lat,lng:p.lng});map.setZoom(15);showInfo(m);}
+      div.onclick=()=>{
+        map.panTo({lat:p.lat,lng:p.lng});
+        map.setZoom(15);
+        showInfo(m);
+      };
       list.appendChild(div);
     }
   });
@@ -177,6 +168,8 @@ function applyFilter(){
 }
 </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRFrDGLMi8UZgAoDITyJu694vKXdTglbU"></script>
+<!-- ✅ callback으로 initMap 확실히 실행 -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRFrDGLMi8UZgAoDITyJu694vKXdTglbU&callback=initMap"></script>
+
 </body>
 </html>
