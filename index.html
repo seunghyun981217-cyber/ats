@@ -68,8 +68,29 @@ const TYPE_COLOR={
 fetch('ats_places.csv')
   .then(r => r.text())
   .then(t => {
-    // PLACES 채우기
-    initMap();   // ✅ 여기서만 호출
+    const rows = t.trim().split(/\n/).slice(1);
+    rows.forEach(r => {
+      if (!r) return;
+      const [name,district,type,lat,lng,description] = r.split(',');
+      PLACES.push({
+        name,
+        district,
+        type,
+        lat: +lat,
+        lng: +lng,
+        description
+      });
+    });
+
+    // ✅ 여기서 map 초기화
+    if (window.google && window.google.maps) {
+      initMap();
+    } else {
+      console.error("Google Maps API 아직 준비 안 됨");
+    }
+  })
+  .catch(e => {
+    console.error("CSV 로드 실패", e);
   });
 
 function initMap(){
@@ -156,6 +177,6 @@ function applyFilter(){
 }
 </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRFrDGLMi8UZgAoDITyJu694vKXdTglbU" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRFrDGLMi8UZgAoDITyJu694vKXdTglbU"></script>
 </body>
 </html>
