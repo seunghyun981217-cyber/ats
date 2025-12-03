@@ -66,15 +66,11 @@ const TYPE_COLOR={
 };
 
 fetch('ats_places.csv')
-.then(r=>r.text())
-.then(t=>{
-  t.trim().split(/\n/).slice(1).forEach(r=>{
-    if(!r) return;
-    const [name,district,type,lat,lng,description]=r.split(',');
-    PLACES.push({name,district,type,lat:+lat,lng:+lng,description});
+  .then(r => r.text())
+  .then(t => {
+    // PLACES 채우기
+    initMap();   // ✅ 여기서만 호출
   });
-  initMap();
-});
 
 function initMap(){
   map=new google.maps.Map(document.getElementById("map"),{
@@ -160,6 +156,6 @@ function applyFilter(){
 }
 </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRFrDGLMi8UZgAoDITyJu694vKXdTglbU&callback=initMap" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRFrDGLMi8UZgAoDITyJu694vKXdTglbU" async defer></script>
 </body>
 </html>
