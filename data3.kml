@@ -1,0 +1,2474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>강남구, 서초구 ATS MAPS</name>
+    <description>강남,서초 휠체어 수리 , 전동휠체어 충전 및 충전기 대여, 수동 휠체어 대여 가능한 곳의 정보를 공유하는 지도</description>
+    <Style id="icon-1561-E65100-normal">
+      <IconStyle>
+        <color>ff0051e6</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1561-E65100-highlight">
+      <IconStyle>
+        <color>ff0051e6</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1561-E65100">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1561-E65100-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1561-E65100-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1590-E65100-normal">
+      <IconStyle>
+        <color>ff0051e6</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1590-E65100-highlight">
+      <IconStyle>
+        <color>ff0051e6</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1590-E65100">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1590-E65100-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1590-E65100-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1590-FBC02D-normal">
+      <IconStyle>
+        <color>ff2dc0fb</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1590-FBC02D-highlight">
+      <IconStyle>
+        <color>ff2dc0fb</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1590-FBC02D">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1590-FBC02D-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1590-FBC02D-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1591-E65100-normal">
+      <IconStyle>
+        <color>ff0051e6</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1591-E65100-highlight">
+      <IconStyle>
+        <color>ff0051e6</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1591-E65100">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1591-E65100-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1591-E65100-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1591-FFD600-normal">
+      <IconStyle>
+        <color>ff00d6ff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1591-FFD600-highlight">
+      <IconStyle>
+        <color>ff00d6ff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1591-FFD600">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1591-FFD600-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1591-FFD600-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1735-FBC02D-normal">
+      <IconStyle>
+        <color>ff2dc0fb</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1735-FBC02D-highlight">
+      <IconStyle>
+        <color>ff2dc0fb</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1735-FBC02D">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1735-FBC02D-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1735-FBC02D-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1735-FBC02D-nodesc-normal">
+      <IconStyle>
+        <color>ff2dc0fb</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1735-FBC02D-nodesc-highlight">
+      <IconStyle>
+        <color>ff2dc0fb</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1735-FBC02D-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1735-FBC02D-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1735-FBC02D-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1787-E65100-normal">
+      <IconStyle>
+        <color>ff0051e6</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1787-E65100-highlight">
+      <IconStyle>
+        <color>ff0051e6</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1787-E65100">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1787-E65100-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1787-E65100-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1787-FBC02D-normal">
+      <IconStyle>
+        <color>ff2dc0fb</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1787-FBC02D-highlight">
+      <IconStyle>
+        <color>ff2dc0fb</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1787-FBC02D">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1787-FBC02D-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1787-FBC02D-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1787-FFD600-normal">
+      <IconStyle>
+        <color>ff00d6ff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1787-FFD600-highlight">
+      <IconStyle>
+        <color>ff00d6ff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1787-FFD600">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1787-FFD600-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1787-FFD600-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-0288D1-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-0288D1-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-0288D1">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-0288D1-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-0288D1-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>강남구 수리 지정 업체</name>
+      <Placemark>
+        <name>엠코리아토탈서비스 / 서울시 강남구 개포로 140길 32 원효빌딩 3층</name>
+        <description><![CDATA[설명: 수리비 지원금액: 수급자 및 차상위 : 연간 30만원                                                                일반 장애인 :연간 20만원<br>전화번호: 02-6407-3879<br>수리비 지원금액: 수급자 및 차상위 : 연간 30만원                                                                일반 장애인 :연간 20만원<br>전화번호: 02-6407-3879]]></description>
+        <styleUrl>#icon-1590-E65100</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>수리비 지원금액: 수급자 및 차상위 : 연간 30만원                                                                일반 장애인 :연간 20만원
+전화번호: 02-6407-3879</value>
+          </Data>
+          <Data name="수리비 지원금액">
+            <value>수급자 및 차상위 : 연간 30만원                                                                일반 장애인 :연간 20만원</value>
+          </Data>
+          <Data name="전화번호">
+            <value>02-6407-3879</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.086572,37.493574,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>강남실버복지센터/ 서울시 강남구 양재대로 55길 29 402호</name>
+        <description><![CDATA[설명: 수리비 지원금액: 수급자 및 차상위 : 연간 30만원                                                             일반 장애인 :연간 20만원<br>전화번호: 02-3411-6050<br>수리비 지원금액: 수급자 및 차상위 : 연간 30만원                                                             일반 장애인 :연간 20만원<br>전화번호: 02-3411-6050]]></description>
+        <styleUrl>#icon-1590-E65100</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>수리비 지원금액: 수급자 및 차상위 : 연간 30만원                                                             일반 장애인 :연간 20만원
+전화번호: 02-3411-6050</value>
+          </Data>
+          <Data name="수리비 지원금액">
+            <value>수급자 및 차상위 : 연간 30만원                                                             일반 장애인 :연간 20만원</value>
+          </Data>
+          <Data name="전화번호">
+            <value>02-3411-6050</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.087073,37.492711,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>케어존/ 서울시 서초구 서초동 </name>
+        <description><![CDATA[설명: 수리비 지원금액: 수급자 및 차상위 : 연간 30만원,                                                                일반 장애인 :연간 20만원<br>전화번호: 02-598-3091<br>수리비 지원금액: 수급자 및 차상위 : 연간 30만원,                                                                일반 장애인 :연간 20만원<br>전화번호: 02-598-3091]]></description>
+        <styleUrl>#icon-1590-E65100</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>수리비 지원금액: 수급자 및 차상위 : 연간 30만원,                                                                일반 장애인 :연간 20만원
+전화번호: 02-598-3091</value>
+          </Data>
+          <Data name="수리비 지원금액">
+            <value>수급자 및 차상위 : 연간 30만원,                                                                일반 장애인 :연간 20만원</value>
+          </Data>
+          <Data name="전화번호">
+            <value>02-598-3091</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.017427,37.487687,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>휠로피아/ 서울 강서구 개화동로 5길 3-26</name>
+        <description><![CDATA[설명: 수리비 지원금액: 수급자 및 차상위 : 연간 30만원, 일반 장애인 :연간 20만원<br>전화번호: 02-2607-8655<br>수리비 지원금액: 수급자 및 차상위 : 연간 30만원, 일반 장애인 :연간 20만원<br>전화번호: 02-2607-8655]]></description>
+        <styleUrl>#icon-1590-E65100</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>수리비 지원금액: 수급자 및 차상위 : 연간 30만원, 일반 장애인 :연간 20만원
+전화번호: 02-2607-8655</value>
+          </Data>
+          <Data name="수리비 지원금액">
+            <value>수급자 및 차상위 : 연간 30만원, 일반 장애인 :연간 20만원</value>
+          </Data>
+          <Data name="전화번호">
+            <value>02-2607-8655</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            126.798795,37.582046,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>액티피아(주) / 서울시 동작구 등용로 14길 60 2층</name>
+        <description><![CDATA[설명: 수리비 지원금액: 수급자 및 차상위 : 연간 30만원, 일반 장애인 :연간 20만원<br>전화번호: 02-3280-2181<br>수리비 지원금액: 수급자 및 차상위 : 연간 30만원, 일반 장애인 :연간 20만원<br>전화번호: 02-3280-2181]]></description>
+        <styleUrl>#icon-1590-E65100</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>수리비 지원금액: 수급자 및 차상위 : 연간 30만원, 일반 장애인 :연간 20만원
+전화번호: 02-3280-2181</value>
+          </Data>
+          <Data name="수리비 지원금액">
+            <value>수급자 및 차상위 : 연간 30만원, 일반 장애인 :연간 20만원</value>
+          </Data>
+          <Data name="전화번호">
+            <value>02-3280-2181</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            126.934821,37.512005,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>강남구 휴대용 충전기 대여소</name>
+      <Placemark>
+        <name>강남장애인자립생활센터</name>
+        <description><![CDATA[설명: 주소: 서울특별시 강남구 개포로 508, 401호 (개포동,소망빌딩)<br>운영시간: 월~금 09:00-19:00<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4Mzk0XjM3LjU2NjUwMV42XjExMTAzMzk4XzFeY2l0eUxpZmVeXl50aGVtZV4uXmxpc3ReLg==<br>주소: 서울특별시 강남구 개포로 508, 401호 (개포동,소망빌딩)<br>운영시간: 월~금 09:00-19:00<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4Mzk0XjM3LjU2NjUwMV42XjExMTAzMzk4XzFeY2l0eUxpZmVeXl50aGVtZV4uXmxpc3ReLg==]]></description>
+        <styleUrl>#icon-1561-E65100</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>주소: 서울특별시 강남구 개포로 508, 401호 (개포동,소망빌딩)
+운영시간: 월~금 09:00-19:00
+출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4Mzk0XjM3LjU2NjUwMV42XjExMTAzMzk4XzFeY2l0eUxpZmVeXl50aGVtZV4uXmxpc3ReLg==</value>
+          </Data>
+          <Data name="주소">
+            <value>서울특별시 강남구 개포로 508, 401호 (개포동,소망빌딩)</value>
+          </Data>
+          <Data name="운영시간">
+            <value>월~금 09:00-19:00</value>
+          </Data>
+          <Data name="출처">
+            <value>https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4Mzk0XjM3LjU2NjUwMV42XjExMTAzMzk4XzFeY2l0eUxpZmVeXl50aGVtZV4uXmxpc3ReLg==</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.067961,37.489209,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>강남실버복지센터</name>
+        <description><![CDATA[설명: 주소: 서울특별시 강남구 양재대로55길 29, 402호 (일원동)<br>운영시간: 월~금 09:00-18:00<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4Mzk0XjM3LjU2NjUwMV42XjExMTAzMzk4XzFeY2l0eUxpZmVeXl50aGVtZV4uXmxpc3ReLg==<br>주소: 서울특별시 강남구 양재대로55길 29, 402호 (일원동)<br>운영시간: 월~금 09:00-18:00<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4Mzk0XjM3LjU2NjUwMV42XjExMTAzMzk4XzFeY2l0eUxpZmVeXl50aGVtZV4uXmxpc3ReLg==]]></description>
+        <styleUrl>#icon-1561-E65100</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>주소: 서울특별시 강남구 양재대로55길 29, 402호 (일원동)
+운영시간: 월~금 09:00-18:00
+출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4Mzk0XjM3LjU2NjUwMV42XjExMTAzMzk4XzFeY2l0eUxpZmVeXl50aGVtZV4uXmxpc3ReLg==</value>
+          </Data>
+          <Data name="주소">
+            <value>서울특별시 강남구 양재대로55길 29, 402호 (일원동)</value>
+          </Data>
+          <Data name="운영시간">
+            <value>월~금 09:00-18:00</value>
+          </Data>
+          <Data name="출처">
+            <value>https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4Mzk0XjM3LjU2NjUwMV42XjExMTAzMzk4XzFeY2l0eUxpZmVeXl50aGVtZV4uXmxpc3ReLg==</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.087073,37.492711,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>엠코리아토탈서비스</name>
+        <description><![CDATA[설명: 주소: 서울특별시 강남구 개포로140길 32, 1층 (일원동)<br>운영시간: 월~금 10:00-16:00<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4Mzk0XjM3LjU2NjUwMV42XjExMTAzMzk4XzFeY2l0eUxpZmVeXl50aGVtZV4uXmxpc3ReLg==<br>주소: 서울특별시 강남구 개포로140길 32, 1층 (일원동)<br>운영시간: 월~금 10:00-16:00<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4Mzk0XjM3LjU2NjUwMV42XjExMTAzMzk4XzFeY2l0eUxpZmVeXl50aGVtZV4uXmxpc3ReLg==]]></description>
+        <styleUrl>#icon-1561-E65100</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>주소: 서울특별시 강남구 개포로140길 32, 1층 (일원동)
+운영시간: 월~금 10:00-16:00
+출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4Mzk0XjM3LjU2NjUwMV42XjExMTAzMzk4XzFeY2l0eUxpZmVeXl50aGVtZV4uXmxpc3ReLg==</value>
+          </Data>
+          <Data name="주소">
+            <value>서울특별시 강남구 개포로140길 32, 1층 (일원동)</value>
+          </Data>
+          <Data name="운영시간">
+            <value>월~금 10:00-16:00</value>
+          </Data>
+          <Data name="출처">
+            <value>https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4Mzk0XjM3LjU2NjUwMV42XjExMTAzMzk4XzFeY2l0eUxpZmVeXl50aGVtZV4uXmxpc3ReLg==</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.086632,37.493584,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>강남구 전동휠체어 충전소 위치</name>
+      <Placemark>
+        <name>세곡동 주민센터</name>
+        <description><![CDATA[설명: 주소: 서울특별시 강남구 밤고개로 286 주민센터 1층<br>운영시간: (평일) 9:00 ~ 18:00<br>(토요일/공휴일) 미운영<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u<br>주소: 서울특별시 강남구 밤고개로 286 주민센터 1층<br>운영시간: (평일) 9:00 ~ 18:00<br>(토요일/공휴일) 미운영<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u]]></description>
+        <styleUrl>#icon-1787-E65100</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>주소: 서울특별시 강남구 밤고개로 286 주민센터 1층
+운영시간: (평일) 9:00 ~ 18:00
+(토요일/공휴일) 미운영
+출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+          <Data name="주소">
+            <value>서울특별시 강남구 밤고개로 286 주민센터 1층</value>
+          </Data>
+          <Data name="운영시간">
+            <value>(평일) 9:00 ~ 18:00
+(토요일/공휴일) 미운영</value>
+          </Data>
+          <Data name="출처">
+            <value>https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.107022,37.469076,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>전동보장구 급속충전기</name>
+        <description><![CDATA[설명: 주소: 서울특별시 강남구 광평로60길 22<br>운영시간: 정보 없음<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u<br>주소: 서울특별시 강남구 광평로60길 22<br>운영시간: 정보 없음<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u]]></description>
+        <styleUrl>#icon-1787-E65100</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>주소: 서울특별시 강남구 광평로60길 22
+운영시간: 정보 없음
+출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+          <Data name="주소">
+            <value>서울특별시 강남구 광평로60길 22</value>
+          </Data>
+          <Data name="운영시간">
+            <value>정보 없음</value>
+          </Data>
+          <Data name="출처">
+            <value>https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.106901,37.487056,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>수서6단지관리사무</name>
+        <description><![CDATA[설명: 주소: 서울특별시 강남구 광평로56길 10 통합경비실<br>운영시간: (평일/토요일/공휴일) 0:00~24:00<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u<br>주소: 서울특별시 강남구 광평로56길 10 통합경비실<br>운영시간: (평일/토요일/공휴일) 0:00~24:00<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u]]></description>
+        <styleUrl>#icon-1787-E65100</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>주소: 서울특별시 강남구 광평로56길 10 통합경비실
+운영시간: (평일/토요일/공휴일) 0:00~24:00
+출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+          <Data name="주소">
+            <value>서울특별시 강남구 광평로56길 10 통합경비실</value>
+          </Data>
+          <Data name="운영시간">
+            <value>(평일/토요일/공휴일) 0:00~24:00</value>
+          </Data>
+          <Data name="출처">
+            <value>https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.103804,37.487096,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>수서역 3번출</name>
+        <description><![CDATA[설명: 주소: 서울특별시 강남구 광평로51길 27 수서역 3번 출구 공중전화 옆<br>운영시간: (평일/토요일/공휴일) 5:30~00:30<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u<br>주소: 서울특별시 강남구 광평로51길 27 수서역 3번 출구 공중전화 옆<br>운영시간: (평일/토요일/공휴일) 5:30~00:30<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u]]></description>
+        <styleUrl>#icon-1787-E65100</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>주소: 서울특별시 강남구 광평로51길 27 수서역 3번 출구 공중전화 옆
+운영시간: (평일/토요일/공휴일) 5:30~00:30
+출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+          <Data name="주소">
+            <value>서울특별시 강남구 광평로51길 27 수서역 3번 출구 공중전화 옆</value>
+          </Data>
+          <Data name="운영시간">
+            <value>(평일/토요일/공휴일) 5:30~00:30</value>
+          </Data>
+          <Data name="출처">
+            <value>https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.102153,37.487477,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>수서명화사회복지관 </name>
+        <description><![CDATA[설명: 주소: 서울특별시 강남구 광평로51길 49 1층 통로 내부<br>운영시간: (평일) 9:00 ~ 18:00<br>(토요일/공휴일) 미운영<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u<br>주소: 서울특별시 강남구 광평로51길 49 1층 통로 내부<br>운영시간: (평일) 9:00 ~ 18:00<br>(토요일/공휴일) 미운영<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u]]></description>
+        <styleUrl>#icon-1787-E65100</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>주소: 서울특별시 강남구 광평로51길 49 1층 통로 내부
+운영시간: (평일) 9:00 ~ 18:00
+(토요일/공휴일) 미운영
+출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+          <Data name="주소">
+            <value>서울특별시 강남구 광평로51길 49 1층 통로 내부</value>
+          </Data>
+          <Data name="운영시간">
+            <value>(평일) 9:00 ~ 18:00
+(토요일/공휴일) 미운영</value>
+          </Data>
+          <Data name="출처">
+            <value>https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.100488,37.491546,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>강남장애인복지관</name>
+        <description><![CDATA[설명: 주소: 서울특별시 강남구 개포로 605 복지관 5층<br>운영시간: (평일) 9:00 ~ 18:00<br>(토요일) 9:00~14:00<br>(공휴일) 미운영<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u<br>주소: 서울특별시 강남구 개포로 605 복지관 5층<br>운영시간: (평일) 9:00 ~ 18:00<br>(토요일) 9:00~14:00<br>(공휴일) 미운영<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u]]></description>
+        <styleUrl>#icon-1787-E65100</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>주소: 서울특별시 강남구 개포로 605 복지관 5층
+운영시간: (평일) 9:00 ~ 18:00
+(토요일) 9:00~14:00
+(공휴일) 미운영
+출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+          <Data name="주소">
+            <value>서울특별시 강남구 개포로 605 복지관 5층</value>
+          </Data>
+          <Data name="운영시간">
+            <value>(평일) 9:00 ~ 18:00
+(토요일) 9:00~14:00
+(공휴일) 미운영</value>
+          </Data>
+          <Data name="출처">
+            <value>https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.073463,37.491994,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>하상장애인복지관</name>
+        <description><![CDATA[설명: 주소: 서울특별시 강남구 개포로 613 1층 외부<br>운영시간: (평일/토요일/공휴일) 0:00~24:00<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u<br>주소: 서울특별시 강남구 개포로 613 1층 외부<br>운영시간: (평일/토요일/공휴일) 0:00~24:00<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u]]></description>
+        <styleUrl>#icon-1787-E65100</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>주소: 서울특별시 강남구 개포로 613 1층 외부
+운영시간: (평일/토요일/공휴일) 0:00~24:00
+출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+          <Data name="주소">
+            <value>서울특별시 강남구 개포로 613 1층 외부</value>
+          </Data>
+          <Data name="운영시간">
+            <value>(평일/토요일/공휴일) 0:00~24:00</value>
+          </Data>
+          <Data name="출처">
+            <value>https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.075035,37.492432,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>개포1동주민센터</name>
+        <description><![CDATA[설명: 주소: 서울특별시 강남구 개포로 303<br>운영시간: (평일) 9:00 ~ 18:00<br>(토요일/공휴일) 미운영<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u<br>주소: 서울특별시 강남구 개포로 303<br>운영시간: (평일) 9:00 ~ 18:00<br>(토요일/공휴일) 미운영<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u]]></description>
+        <styleUrl>#icon-1787-E65100</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>주소: 서울특별시 강남구 개포로 303
+운영시간: (평일) 9:00 ~ 18:00
+(토요일/공휴일) 미운영
+출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+          <Data name="주소">
+            <value>서울특별시 강남구 개포로 303</value>
+          </Data>
+          <Data name="운영시간">
+            <value>(평일) 9:00 ~ 18:00
+(토요일/공휴일) 미운영</value>
+          </Data>
+          <Data name="출처">
+            <value>https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.055593,37.482682,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>대치2동 주민센터</name>
+        <description><![CDATA[설명: 주소: 서울특별시 강남구 영동대로65길 24 문화센터 1층<br>운영시간: (평일/토요일) 6:00 ~ 22:00<br>(공휴일) 미운영<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u<br>주소: 서울특별시 강남구 영동대로65길 24 문화센터 1층<br>운영시간: (평일/토요일) 6:00 ~ 22:00<br>(공휴일) 미운영<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u]]></description>
+        <styleUrl>#icon-1787-E65100</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>주소: 서울특별시 강남구 영동대로65길 24 문화센터 1층
+운영시간: (평일/토요일) 6:00 ~ 22:00
+(공휴일) 미운영
+출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+          <Data name="주소">
+            <value>서울특별시 강남구 영동대로65길 24 문화센터 1층</value>
+          </Data>
+          <Data name="운영시간">
+            <value>(평일/토요일) 6:00 ~ 22:00
+(공휴일) 미운영</value>
+          </Data>
+          <Data name="출처">
+            <value>https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.06416,37.502246,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>선릉역</name>
+        <description><![CDATA[설명: 주소: 서울특별시 강남구 테헤란로 507 선릉역 지하 1번출구와 화장실 사이<br>운영시간: (평일/토요일/공휴일) 5:30~00:30<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u<br>주소: 서울특별시 강남구 테헤란로 507 선릉역 지하 1번출구와 화장실 사이<br>운영시간: (평일/토요일/공휴일) 5:30~00:30<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u]]></description>
+        <styleUrl>#icon-1787-E65100</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>주소: 서울특별시 강남구 테헤란로 507 선릉역 지하 1번출구와 화장실 사이
+운영시간: (평일/토요일/공휴일) 5:30~00:30
+출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+          <Data name="주소">
+            <value>서울특별시 강남구 테헤란로 507 선릉역 지하 1번출구와 화장실 사이</value>
+          </Data>
+          <Data name="운영시간">
+            <value>(평일/토요일/공휴일) 5:30~00:30</value>
+          </Data>
+          <Data name="출처">
+            <value>https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.048957,37.504487,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>역삼장애인주간보호센터</name>
+        <description><![CDATA[설명: 주소: <br>운영시간: <br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u<br>주소: <br>운영시간: <br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u]]></description>
+        <styleUrl>#icon-1787-E65100</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>주소: 
+운영시간: 
+출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+          <Data name="주소">
+            <value/>
+          </Data>
+          <Data name="운영시간">
+            <value/>
+          </Data>
+          <Data name="출처">
+            <value>https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.031883,37.496406,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>역삼주간보호센터</name>
+        <description><![CDATA[설명: 주소: 서울특별시 강남구 테헤란로8길 36 2층입구 (02-518-2270)<br>운영시간: (평일/토요일) 9:00 ~ 18:00<br>(공휴일) 미운영<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u<br>주소: 서울특별시 강남구 테헤란로8길 36 2층입구 (02-518-2270)<br>운영시간: (평일/토요일) 9:00 ~ 18:00<br>(공휴일) 미운영<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u]]></description>
+        <styleUrl>#icon-1787-E65100</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>주소: 서울특별시 강남구 테헤란로8길 36 2층입구 (02-518-2270)
+운영시간: (평일/토요일) 9:00 ~ 18:00
+(공휴일) 미운영
+출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+          <Data name="주소">
+            <value>서울특별시 강남구 테헤란로8길 36 2층입구 (02-518-2270)</value>
+          </Data>
+          <Data name="운영시간">
+            <value>(평일/토요일) 9:00 ~ 18:00
+(공휴일) 미운영</value>
+          </Data>
+          <Data name="출처">
+            <value>https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.031508,37.497139,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>역삼1동 주민센터</name>
+        <description><![CDATA[설명: 주소: 서울특별시 강남구 역삼로7길 16 문화센터 1층<br>운영시간: (평일) 6:00 ~ 22:00<br>(토요일/공휴일) 미운영<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u<br>주소: 서울특별시 강남구 역삼로7길 16 문화센터 1층<br>운영시간: (평일) 6:00 ~ 22:00<br>(토요일/공휴일) 미운영<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u]]></description>
+        <styleUrl>#icon-1787-E65100</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>주소: 서울특별시 강남구 역삼로7길 16 문화센터 1층
+운영시간: (평일) 6:00 ~ 22:00
+(토요일/공휴일) 미운영
+출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+          <Data name="주소">
+            <value>서울특별시 강남구 역삼로7길 16 문화센터 1층</value>
+          </Data>
+          <Data name="운영시간">
+            <value>(평일) 6:00 ~ 22:00
+(토요일/공휴일) 미운영</value>
+          </Data>
+          <Data name="출처">
+            <value>https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.033216,37.495188,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>사랑의복지관</name>
+        <description><![CDATA[설명: 주소: 서울특별시 서초구 강남대로65길 19<br>운영시간: (평일) 9:00 ~ 18:00<br>(토요일/공휴일) 미운영<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u<br>주소: 서울특별시 서초구 강남대로65길 19<br>운영시간: (평일) 9:00 ~ 18:00<br>(토요일/공휴일) 미운영<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u]]></description>
+        <styleUrl>#icon-1787-E65100</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>주소: 서울특별시 서초구 강남대로65길 19
+운영시간: (평일) 9:00 ~ 18:00
+(토요일/공휴일) 미운영
+출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+          <Data name="주소">
+            <value>서울특별시 서초구 강남대로65길 19</value>
+          </Data>
+          <Data name="운영시간">
+            <value>(평일) 9:00 ~ 18:00
+(토요일/공휴일) 미운영</value>
+          </Data>
+          <Data name="출처">
+            <value>https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.024008,37.499796,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>충현복지관</name>
+        <description><![CDATA[설명: 주소: 서울특별시 강남구 봉은사로30길 59<br>운영시간: (평일) 9:00 ~ 18:00<br>(토요일/공휴일) 미운영<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u<br>주소: 서울특별시 강남구 봉은사로30길 59<br>운영시간: (평일) 9:00 ~ 18:00<br>(토요일/공휴일) 미운영<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u]]></description>
+        <styleUrl>#icon-1787-E65100</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>주소: 서울특별시 강남구 봉은사로30길 59
+운영시간: (평일) 9:00 ~ 18:00
+(토요일/공휴일) 미운영
+출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+          <Data name="주소">
+            <value>서울특별시 강남구 봉은사로30길 59</value>
+          </Data>
+          <Data name="운영시간">
+            <value>(평일) 9:00 ~ 18:00
+(토요일/공휴일) 미운영</value>
+          </Data>
+          <Data name="출처">
+            <value>https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.036944,37.503611,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>논현역</name>
+        <description><![CDATA[설명: 주소: 서울특별시 서초구 신반포로 340 (지하2층 대합실 개찰구 앞 기둥-개찰구 외)<br>운영시간: (평일/토요일/공휴일) 5:00 ~ 24:00<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u<br>주소: 서울특별시 서초구 신반포로 340 (지하2층 대합실 개찰구 앞 기둥-개찰구 외)<br>운영시간: (평일/토요일/공휴일) 5:00 ~ 24:00<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u]]></description>
+        <styleUrl>#icon-1787-E65100</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>주소: 서울특별시 서초구 신반포로 340 (지하2층 대합실 개찰구 앞 기둥-개찰구 외)
+운영시간: (평일/토요일/공휴일) 5:00 ~ 24:00
+출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+          <Data name="주소">
+            <value>서울특별시 서초구 신반포로 340 (지하2층 대합실 개찰구 앞 기둥-개찰구 외)</value>
+          </Data>
+          <Data name="운영시간">
+            <value>(평일/토요일/공휴일) 5:00 ~ 24:00</value>
+          </Data>
+          <Data name="출처">
+            <value>https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.021828,37.510648,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>강남구립논현노인종합복지관</name>
+        <description><![CDATA[설명: 주소: 서울특별시 강남구 강남대로128길 59<br>운영시간: (평일) 9:00 ~ 18:00<br>(토요일/공휴일) 미운영<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u<br>주소: 서울특별시 강남구 강남대로128길 59<br>운영시간: (평일) 9:00 ~ 18:00<br>(토요일/공휴일) 미운영<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u]]></description>
+        <styleUrl>#icon-1787-E65100</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>주소: 서울특별시 강남구 강남대로128길 59
+운영시간: (평일) 9:00 ~ 18:00
+(토요일/공휴일) 미운영
+출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+          <Data name="주소">
+            <value>서울특별시 강남구 강남대로128길 59</value>
+          </Data>
+          <Data name="운영시간">
+            <value>(평일) 9:00 ~ 18:00
+(토요일/공휴일) 미운영</value>
+          </Data>
+          <Data name="출처">
+            <value>https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.026133,37.511987,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>삼성2동 주민센터</name>
+        <description><![CDATA[설명: 주소: 서울특별시 강남구 봉은사로 419 문화센터 1층 엘리베이터 옆<br>운영시간: (평일) 9:00 ~ 22:00<br>(토요일/공휴일) 미운영<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u<br>주소: 서울특별시 강남구 봉은사로 419 문화센터 1층 엘리베이터 옆<br>운영시간: (평일) 9:00 ~ 22:00<br>(토요일/공휴일) 미운영<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u]]></description>
+        <styleUrl>#icon-1787-E65100</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>주소: 서울특별시 강남구 봉은사로 419 문화센터 1층 엘리베이터 옆
+운영시간: (평일) 9:00 ~ 22:00
+(토요일/공휴일) 미운영
+출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+          <Data name="주소">
+            <value>서울특별시 강남구 봉은사로 419 문화센터 1층 엘리베이터 옆</value>
+          </Data>
+          <Data name="운영시간">
+            <value>(평일) 9:00 ~ 22:00
+(토요일/공휴일) 미운영</value>
+          </Data>
+          <Data name="출처">
+            <value>https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.045992,37.511154,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>강남구청</name>
+        <description><![CDATA[설명: 주소: 서울특별시 강남구 학동로 426<br>운영시간: (평일) 9:00 ~ 18:00<br>(토요일/공휴일)0:00~24:00<br><br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u<br>주소: 서울특별시 강남구 학동로 426<br>운영시간: (평일) 9:00 ~ 18:00<br>(토요일/공휴일)0:00~24:00<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u]]></description>
+        <styleUrl>#icon-1787-E65100</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>주소: 서울특별시 강남구 학동로 426
+운영시간: (평일) 9:00 ~ 18:00
+(토요일/공휴일)0:00~24:00
+
+출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+          <Data name="주소">
+            <value>서울특별시 강남구 학동로 426</value>
+          </Data>
+          <Data name="운영시간">
+            <value>(평일) 9:00 ~ 18:00
+(토요일/공휴일)0:00~24:00</value>
+          </Data>
+          <Data name="출처">
+            <value>https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.047375,37.517507,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>청담동 주민센터</name>
+        <description><![CDATA[설명: 주소: 서울특별시 강남구 압구정로79길 26 1층 주출입구 유리문 사이<br>운영시간: (평일) 9:00 ~ 18:00<br>(토요일/공휴일) 미운영<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u<br>주소: 서울특별시 강남구 압구정로79길 26 1층 주출입구 유리문 사이<br>운영시간: (평일) 9:00 ~ 18:00<br>(토요일/공휴일) 미운영<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u]]></description>
+        <styleUrl>#icon-1787-E65100</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>주소: 서울특별시 강남구 압구정로79길 26 1층 주출입구 유리문 사이
+운영시간: (평일) 9:00 ~ 18:00
+(토요일/공휴일) 미운영
+출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+          <Data name="주소">
+            <value>서울특별시 강남구 압구정로79길 26 1층 주출입구 유리문 사이</value>
+          </Data>
+          <Data name="운영시간">
+            <value>(평일) 9:00 ~ 18:00
+(토요일/공휴일) 미운영</value>
+          </Data>
+          <Data name="출처">
+            <value>https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.049297,37.525041,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>압구정동 주민센터</name>
+        <description><![CDATA[설명: 주소: 서울특별시 강남구 압구정로 201 민원실<br>운영시간: (평일) 9:00 ~ 18:00<br>(토요일/공휴일) 미운영<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u<br>주소: 서울특별시 강남구 압구정로 201 민원실<br>운영시간: (평일) 9:00 ~ 18:00<br>(토요일/공휴일) 미운영<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u]]></description>
+        <styleUrl>#icon-1787-E65100</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>주소: 서울특별시 강남구 압구정로 201 민원실
+운영시간: (평일) 9:00 ~ 18:00
+(토요일/공휴일) 미운영
+출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+          <Data name="주소">
+            <value>서울특별시 강남구 압구정로 201 민원실</value>
+          </Data>
+          <Data name="운영시간">
+            <value>(평일) 9:00 ~ 18:00
+(토요일/공휴일) 미운영</value>
+          </Data>
+          <Data name="출처">
+            <value>https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMzBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.030832,37.530754,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>서초구 수리 지정 업체</name>
+      <Placemark>
+        <name>한우리보장구수리센터</name>
+        <description><![CDATA[설명: 수리비 지원금액: 수급자 및 차상위 계층 : 연간 30만원 , 장애인 : 연간 10만원<br>전화번호: 02-2290-3100<br>수리비 지원금액: 수급자 및 차상위 계층 : 연간 30만원 , 장애인 : 연간 10만원<br>전화번호: 02-2290-3100]]></description>
+        <styleUrl>#icon-1590-FBC02D</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>수리비 지원금액: 수급자 및 차상위 계층 : 연간 30만원 , 장애인 : 연간 10만원
+전화번호: 02-2290-3100</value>
+          </Data>
+          <Data name="수리비 지원금액">
+            <value>수급자 및 차상위 계층 : 연간 30만원 , 장애인 : 연간 10만원</value>
+          </Data>
+          <Data name="전화번호">
+            <value>02-2290-3100</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.02487,37.482142,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>서초구 휠체어 공기주입기 위치</name>
+      <Placemark>
+        <name>서초구립반포서래어린이집</name>
+        <description>서울특별시 서초구 사평대로28길 70</description>
+        <styleUrl>#icon-1735-FBC02D</styleUrl>
+        <Point>
+          <coordinates>
+            127.000304,37.497438,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>반포3동 주민센터</name>
+        <description>서울특별시 서초구 신반포로23길 78</description>
+        <styleUrl>#icon-1735-FBC02D</styleUrl>
+        <Point>
+          <coordinates>
+            127.005577,37.512048,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>반포2동 주민센터</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            126.998234,37.504384,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>반포1동 주민센터</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            127.013377,37.505081,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>잠원동 주민센터</name>
+        <description>서울특별시 서초구 나루터로 46, 102동 (잠원동, 금호베스트빌아파트)</description>
+        <styleUrl>#icon-1735-FBC02D</styleUrl>
+        <Point>
+          <coordinates>
+            127.01394,37.514958,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>강남역 7,8번 출구</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            127.029535,37.493587,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>신반포역 1번출구</name>
+        <description>서울특별시 서초구 신반포로15길 4, 103동 (반포동, 반포푸르지오아파트)</description>
+        <styleUrl>#icon-1735-FBC02D</styleUrl>
+        <Point>
+          <coordinates>
+            126.997218,37.503985,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>언남문화체육센터</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            127.043392,37.472338,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>고속터미널 몰 G4번 출구</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            127.00123,37.505508,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>방배역 4번출구</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            126.997818,37.48182,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>내방역 6번출구</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            126.992898,37.488033,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>서울매헌초등학교</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            127.042077,37.471048,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>교육개발원사거리</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            127.038024,37.478458,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>내곡도서관</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            127.054374,37.45196,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>서초더샵포레</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            127.062881,37.453847,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>서초포레스타3단지아파트</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            127.059141,37.454928,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>서초포레스타2단지아파트</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            127.060978,37.455484,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>청계산입구역 1번출구앞</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            127.054726,37.448215,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>하이브랜드 앞</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            127.037014,37.463395,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>LH서초3단지 인근 따릉이대여소</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            127.025049,37.458969,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>서초호반써밋아파트</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            127.013418,37.456415,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>우면동섬들 근린공원</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            127.025473,37.463103,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>삼호물산 (포이사거리)</name>
+        <description>서울특별시 서초구 논현로 87</description>
+        <styleUrl>#icon-1735-FBC02D</styleUrl>
+        <Point>
+          <coordinates>
+            127.044236,37.477558,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>서초4동 주민센터</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            127.02211,37.502697,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>매헌시민의숲 역 1번출구 뒤</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            127.038328,37.469972,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>양재시장 육교밑</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            127.037275,37.484801,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>방배역 1번출구 뒤</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            126.998336,37.481193,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>레미안리더스원사거리</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            127.028127,37.488484,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>남부터미널역 5번출구 앞</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            127.015602,37.484138,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>서초역 3번출구</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            127.007701,37.491251,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>반포종합운동장</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            126.993876,37.500535,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>교대역6번출구</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            127.013717,37.494267,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>신논현역 8번출구</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            127.024071,37.503775,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>서초종합체육관</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            127.041653,37.459007,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>서초2동 주민센터</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            127.02494,37.492041,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>고속터미널 8-1번출구</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            127.004915,37.504914,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>고속터미널역 5번출구</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            127.004915,37.504914,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>구반포역 1번출구</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            126.987427,37.501431,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>동작역 1번출구</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            126.980341,37.502915,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>이수역 5,6 번출구 사이</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            126.982143,37.485382,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>서초구 자전거 수리센터</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            126.9823,37.476794,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>서울고등법원</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            127.011407,37.496112,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>원촌중학교</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            127.013579,37.505904,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>서문여자고등학교</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            126.985497,37.489305,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>서초1동 주민센터</name>
+        <styleUrl>#icon-1735-FBC02D-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            127.019525,37.490068,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>서초구 전동휠체어 충전소 위치</name>
+      <Placemark>
+        <name>양재2동 주민센터</name>
+        <description><![CDATA[설명: 주소: 서울특별시 서초구 강남대로12길 44 1층 민원실 입구<br>운영시간: (평일) 9:00 ~ 18:00<br>(토요일/공휴일) 미운영<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u<br>주소: 서울특별시 서초구 강남대로12길 44 1층 민원실 입구<br>운영시간: (평일) 9:00 ~ 18:00<br>(토요일/공휴일) 미운영<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u]]></description>
+        <styleUrl>#icon-1787-FBC02D</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>주소: 서울특별시 서초구 강남대로12길 44 1층 민원실 입구
+운영시간: (평일) 9:00 ~ 18:00
+(토요일/공휴일) 미운영
+출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+          <Data name="주소">
+            <value>서울특별시 서초구 강남대로12길 44 1층 민원실 입구</value>
+          </Data>
+          <Data name="운영시간">
+            <value>(평일) 9:00 ~ 18:00
+(토요일/공휴일) 미운영</value>
+          </Data>
+          <Data name="출처">
+            <value>https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.041216,37.470575,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>서초문화예술회관</name>
+        <description><![CDATA[설명: 주소: 서울특별시 서초구 강남대로 201 1층공연장 왼쪽입구<br>운영시간: (평일) 9:00 ~ 18:00<br>(토요일/공휴일) 미운영<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u<br>주소: 서울특별시 서초구 강남대로 201 1층공연장 왼쪽입구<br>운영시간: (평일) 9:00 ~ 18:00<br>(토요일/공휴일) 미운영<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u]]></description>
+        <styleUrl>#icon-1787-FBC02D</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>주소: 서울특별시 서초구 강남대로 201 1층공연장 왼쪽입구
+운영시간: (평일) 9:00 ~ 18:00
+(토요일/공휴일) 미운영
+출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+          <Data name="주소">
+            <value>서울특별시 서초구 강남대로 201 1층공연장 왼쪽입구</value>
+          </Data>
+          <Data name="운영시간">
+            <value>(평일) 9:00 ~ 18:00
+(토요일/공휴일) 미운영</value>
+          </Data>
+          <Data name="출처">
+            <value>https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.035826,37.481688,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>서초구청</name>
+        <description><![CDATA[설명: 주소: 서울특별시 서초구 남부순환로 2584  1층 종합상황실 옆<br>운영시간: (평일) 9:00 ~ 18:00<br>(토요일/공휴일) 미운영<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u<br>주소: 서울특별시 서초구 남부순환로 2584  1층 종합상황실 옆<br>운영시간: (평일) 9:00 ~ 18:00<br>(토요일/공휴일) 미운영<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u]]></description>
+        <styleUrl>#icon-1787-FBC02D</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>주소: 서울특별시 서초구 남부순환로 2584  1층 종합상황실 옆
+운영시간: (평일) 9:00 ~ 18:00
+(토요일/공휴일) 미운영
+출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+          <Data name="주소">
+            <value>서울특별시 서초구 남부순환로 2584  1층 종합상황실 옆</value>
+          </Data>
+          <Data name="운영시간">
+            <value>(평일) 9:00 ~ 18:00
+(토요일/공휴일) 미운영</value>
+          </Data>
+          <Data name="출처">
+            <value>https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.032699,37.483587,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>서초구립한우리정보문화센터</name>
+        <description><![CDATA[설명: 주소: 서울특별시 서초구 남부순환로340길 15 GS편의점 뒷편 건물<br>운영시간: (평일) 9:00 ~ 18:00<br>(토요일/공휴일) 미운영<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u<br>주소: 서울특별시 서초구 남부순환로340길 15 GS편의점 뒷편 건물<br>운영시간: (평일) 9:00 ~ 18:00<br>(토요일/공휴일) 미운영<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u]]></description>
+        <styleUrl>#icon-1787-FBC02D</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>주소: 서울특별시 서초구 남부순환로340길 15 GS편의점 뒷편 건물
+운영시간: (평일) 9:00 ~ 18:00
+(토요일/공휴일) 미운영
+출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+          <Data name="주소">
+            <value>서울특별시 서초구 남부순환로340길 15 GS편의점 뒷편 건물</value>
+          </Data>
+          <Data name="운영시간">
+            <value>(평일) 9:00 ~ 18:00
+(토요일/공휴일) 미운영</value>
+          </Data>
+          <Data name="출처">
+            <value>https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.025036,37.482018,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>예술의전당</name>
+        <description><![CDATA[설명: 주소: 서울특별시 서초구 남부순환로 2406 지하 1층 비타민스테이션 인포메이션 옆<br>운영시간: (평일/토요일/공휴일) 9:00 ~ 18:00<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u<br>주소: 서울특별시 서초구 남부순환로 2406 지하 1층 비타민스테이션 인포메이션 옆<br>운영시간: (평일/토요일/공휴일) 9:00 ~ 18:00<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u]]></description>
+        <styleUrl>#icon-1787-FBC02D</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>주소: 서울특별시 서초구 남부순환로 2406 지하 1층 비타민스테이션 인포메이션 옆
+운영시간: (평일/토요일/공휴일) 9:00 ~ 18:00
+출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+          <Data name="주소">
+            <value>서울특별시 서초구 남부순환로 2406 지하 1층 비타민스테이션 인포메이션 옆</value>
+          </Data>
+          <Data name="운영시간">
+            <value>(평일/토요일/공휴일) 9:00 ~ 18:00</value>
+          </Data>
+          <Data name="출처">
+            <value>https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.012861,37.47929,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>내방역</name>
+        <description><![CDATA[설명: 주소: 서울특별시 서초구 서초대로 103 지하2층 대합실 유수검지장치실 옆 개찰구 내<br>운영시간: (평일/토요일/공휴일) 5:00~24:00<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u<br>주소: 서울특별시 서초구 서초대로 103 지하2층 대합실 유수검지장치실 옆 개찰구 내<br>운영시간: (평일/토요일/공휴일) 5:00~24:00<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u]]></description>
+        <styleUrl>#icon-1787-FBC02D</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>주소: 서울특별시 서초구 서초대로 103 지하2층 대합실 유수검지장치실 옆 개찰구 내
+운영시간: (평일/토요일/공휴일) 5:00~24:00
+출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+          <Data name="주소">
+            <value>서울특별시 서초구 서초대로 103 지하2층 대합실 유수검지장치실 옆 개찰구 내</value>
+          </Data>
+          <Data name="운영시간">
+            <value>(평일/토요일/공휴일) 5:00~24:00</value>
+          </Data>
+          <Data name="출처">
+            <value>https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            126.993598,37.487707,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>서초역</name>
+        <description><![CDATA[설명: 주소: 서울특별시 서초구 서초대로 233 지하 1층 3,4번 출구 모래함 옆 개찰구 <br>운영시간: (평일/토요일/공휴일) 5:00~24:00<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u<br>주소: 서울특별시 서초구 서초대로 233 지하 1층 3,4번 출구 모래함 옆 개찰구 <br>운영시간: (평일/토요일/공휴일) 5:00~24:00<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u]]></description>
+        <styleUrl>#icon-1787-FBC02D</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>주소: 서울특별시 서초구 서초대로 233 지하 1층 3,4번 출구 모래함 옆 개찰구 
+운영시간: (평일/토요일/공휴일) 5:00~24:00
+출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+          <Data name="주소">
+            <value>서울특별시 서초구 서초대로 233 지하 1층 3,4번 출구 모래함 옆 개찰구 </value>
+          </Data>
+          <Data name="운영시간">
+            <value>(평일/토요일/공휴일) 5:00~24:00</value>
+          </Data>
+          <Data name="출처">
+            <value>https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.007688,37.49184,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>서초구립중앙노인종합복지관</name>
+        <description><![CDATA[설명: 주소: 서울특별시 서초구 서초대로54길 45 1층 스마트 교육실 앞<br><br>운영시간: (평일) 9:00 ~ 18:00<br>(토요일/공휴일) 미운영<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u<br>주소: 서울특별시 서초구 서초대로54길 45 1층 스마트 교육실 앞<br>운영시간: (평일) 9:00 ~ 18:00<br>(토요일/공휴일) 미운영<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u]]></description>
+        <styleUrl>#icon-1787-FBC02D</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>주소: 서울특별시 서초구 서초대로54길 45 1층 스마트 교육실 앞
+
+운영시간: (평일) 9:00 ~ 18:00
+(토요일/공휴일) 미운영
+출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+          <Data name="주소">
+            <value>서울특별시 서초구 서초대로54길 45 1층 스마트 교육실 앞</value>
+          </Data>
+          <Data name="운영시간">
+            <value>(평일) 9:00 ~ 18:00
+(토요일/공휴일) 미운영</value>
+          </Data>
+          <Data name="출처">
+            <value>https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.016773,37.492295,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>가톨릭대학교 서울성모병원</name>
+        <description><![CDATA[설명: 주소: 서울특별시 서초구 반포대로 222 별관 외부 셔틀차량 주차장<br>운영시간: (평일) 8:00 ~ 19:00<br>(토요일/공휴일) 8:00~13:00<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u<br>주소: 서울특별시 서초구 반포대로 222 별관 외부 셔틀차량 주차장<br>운영시간: (평일) 8:00 ~ 19:00<br>(토요일/공휴일) 8:00~13:00<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u]]></description>
+        <styleUrl>#icon-1787-FBC02D</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>주소: 서울특별시 서초구 반포대로 222 별관 외부 셔틀차량 주차장
+운영시간: (평일) 8:00 ~ 19:00
+(토요일/공휴일) 8:00~13:00
+출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+          <Data name="주소">
+            <value>서울특별시 서초구 반포대로 222 별관 외부 셔틀차량 주차장</value>
+          </Data>
+          <Data name="운영시간">
+            <value>(평일) 8:00 ~ 19:00
+(토요일/공휴일) 8:00~13:00</value>
+          </Data>
+          <Data name="출처">
+            <value>https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.004768,37.501612,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>고속터미널 센트럴시티 13번 휠체어 탑승게이트</name>
+        <description><![CDATA[설명: 주소: <br>운영시간: (평일/토요일/공휴일) 5:00 ~ 24:00<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u<br>주소: <br>운영시간: (평일/토요일/공휴일) 5:00 ~ 24:00<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u]]></description>
+        <styleUrl>#icon-1787-FBC02D</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>주소: 
+운영시간: (평일/토요일/공휴일) 5:00 ~ 24:00
+출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+          <Data name="주소">
+            <value/>
+          </Data>
+          <Data name="운영시간">
+            <value>(평일/토요일/공휴일) 5:00 ~ 24:00</value>
+          </Data>
+          <Data name="출처">
+            <value>https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.004915,37.504914,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>고속터미널역 7호선</name>
+        <description><![CDATA[설명: 주소: 서울특별시 서초구 신반포로 176  (지하2층 3,4번 출구 방향 대합실 구호용품보관함 옆-개찰구 내)<br>운영시간: (평일/토요일/공휴일) 5:00~24:00<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u<br>주소: 서울특별시 서초구 신반포로 176  (지하2층 3,4번 출구 방향 대합실 구호용품보관함 옆-개찰구 내)<br>운영시간: (평일/토요일/공휴일) 5:00~24:00<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u]]></description>
+        <styleUrl>#icon-1787-FBC02D</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>주소: 서울특별시 서초구 신반포로 176  (지하2층 3,4번 출구 방향 대합실 구호용품보관함 옆-개찰구 내)
+운영시간: (평일/토요일/공휴일) 5:00~24:00
+출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+          <Data name="주소">
+            <value>서울특별시 서초구 신반포로 176  (지하2층 3,4번 출구 방향 대합실 구호용품보관함 옆-개찰구 내)</value>
+          </Data>
+          <Data name="운영시간">
+            <value>(평일/토요일/공휴일) 5:00~24:00</value>
+          </Data>
+          <Data name="출처">
+            <value>https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.004915,37.504914,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>고속터미널역 경부선</name>
+        <description><![CDATA[설명: 주소: 서울특별시 서초구 신반포로 194 (경부선)(17번 휠체어 탑승게이트)<br>운영시간: (평일/토요일/공휴일) 9:00 ~ 24:00<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u<br>주소: 서울특별시 서초구 신반포로 194 (경부선)(17번 휠체어 탑승게이트)<br>운영시간: (평일/토요일/공휴일) 9:00 ~ 24:00<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u]]></description>
+        <styleUrl>#icon-1787-FBC02D</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>주소: 서울특별시 서초구 신반포로 194 (경부선)(17번 휠체어 탑승게이트)
+운영시간: (평일/토요일/공휴일) 9:00 ~ 24:00
+출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+          <Data name="주소">
+            <value>서울특별시 서초구 신반포로 194 (경부선)(17번 휠체어 탑승게이트)</value>
+          </Data>
+          <Data name="운영시간">
+            <value>(평일/토요일/공휴일) 9:00 ~ 24:00</value>
+          </Data>
+          <Data name="출처">
+            <value>https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.004915,37.504914,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>고속터미널역 9호선</name>
+        <description><![CDATA[설명: 주소: 서울특별시 서초구 신반포로 179-3 (지하1층 8-1, 8-2 출구 방향 개찰구 바로 앞-개찰구 외) <br>운영시간: (평일/토요일/공휴일) 5:00 ~ 24:00<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u<br>주소: 서울특별시 서초구 신반포로 179-3 (지하1층 8-1, 8-2 출구 방향 개찰구 바로 앞-개찰구 외) <br>운영시간: (평일/토요일/공휴일) 5:00 ~ 24:00<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u]]></description>
+        <styleUrl>#icon-1787-FBC02D</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>주소: 서울특별시 서초구 신반포로 179-3 (지하1층 8-1, 8-2 출구 방향 개찰구 바로 앞-개찰구 외) 
+운영시간: (평일/토요일/공휴일) 5:00 ~ 24:00
+출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+          <Data name="주소">
+            <value>서울특별시 서초구 신반포로 179-3 (지하1층 8-1, 8-2 출구 방향 개찰구 바로 앞-개찰구 외) </value>
+          </Data>
+          <Data name="운영시간">
+            <value>(평일/토요일/공휴일) 5:00 ~ 24:00</value>
+          </Data>
+          <Data name="출처">
+            <value>https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.004915,37.504914,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>반포역</name>
+        <description><![CDATA[설명: 주소: 서울특별시 서초구 신반포로 241 (지하2층 대합실 자동사진기 옆-개찰구 외)<br>운영시간: (평일/토요일/공휴일) 5:00~24:00<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u<br>주소: 서울특별시 서초구 신반포로 241 (지하2층 대합실 자동사진기 옆-개찰구 외)<br>운영시간: (평일/토요일/공휴일) 5:00~24:00<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u]]></description>
+        <styleUrl>#icon-1787-FBC02D</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>주소: 서울특별시 서초구 신반포로 241 (지하2층 대합실 자동사진기 옆-개찰구 외)
+운영시간: (평일/토요일/공휴일) 5:00~24:00
+출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+          <Data name="주소">
+            <value>서울특별시 서초구 신반포로 241 (지하2층 대합실 자동사진기 옆-개찰구 외)</value>
+          </Data>
+          <Data name="운영시간">
+            <value>(평일/토요일/공휴일) 5:00~24:00</value>
+          </Data>
+          <Data name="출처">
+            <value>https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.011847,37.508213,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>잠원역 3,4번출구</name>
+        <description><![CDATA[설명: 주소: 서울특별시 서초구 잠원로4길 45 (지하1층 4번 출구 고객안내센터 옆-개찰구 외)<br>운영시간: (평일/토요일/공휴일) 5:00~24:00<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u<br>주소: 서울특별시 서초구 잠원로4길 45 (지하1층 4번 출구 고객안내센터 옆-개찰구 외)<br>운영시간: (평일/토요일/공휴일) 5:00~24:00<br>출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u]]></description>
+        <styleUrl>#icon-1787-FFD600</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>주소: 서울특별시 서초구 잠원로4길 45 (지하1층 4번 출구 고객안내센터 옆-개찰구 외)
+운영시간: (평일/토요일/공휴일) 5:00~24:00
+출처: https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+          <Data name="주소">
+            <value>서울특별시 서초구 잠원로4길 45 (지하1층 4번 출구 고객안내센터 옆-개찰구 외)</value>
+          </Data>
+          <Data name="운영시간">
+            <value>(평일/토요일/공휴일) 5:00~24:00</value>
+          </Data>
+          <Data name="출처">
+            <value>https://map.seoul.go.kr/smgis2/tmc/XkJBU0VNQVBfR0VOXlQ6MTEyMjBeRl5GXkZeXl5eXl4xMjYuOTc4NTA5XjM3LjU2NjYxMV42XjExMTAzMzkyXzIvMV5jaXR5TGlmZV5eXnRoZW1lXi5ebGlzdF4u</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.011611,37.51296,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>서초구 휠체어 대여소</name>
+      <Placemark>
+        <name>서초1동 주민센터</name>
+        <description><![CDATA[설명: 대상: 일시적으로 보조기기를 필요로 하는 서초구민<br>전화번호: 02-2155-8271<br>대상: 일시적으로 보조기기를 필요로 하는 서초구민<br>전화번호: 02-2155-8271]]></description>
+        <styleUrl>#icon-1591-FFD600</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>대상: 일시적으로 보조기기를 필요로 하는 서초구민
+전화번호: 02-2155-8271</value>
+          </Data>
+          <Data name="대상">
+            <value>일시적으로 보조기기를 필요로 하는 서초구민</value>
+          </Data>
+          <Data name="전화번호">
+            <value>02-2155-8271</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.019525,37.490068,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>서초2동 주민센터</name>
+        <description><![CDATA[설명: 대상: 일시적으로 보조기기를 필요로 하는 서초구민<br>전화번호: 02-2155-7454<br>대상: 일시적으로 보조기기를 필요로 하는 서초구민<br>전화번호: 02-2155-7454]]></description>
+        <styleUrl>#icon-1591-FFD600</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>대상: 일시적으로 보조기기를 필요로 하는 서초구민
+전화번호: 02-2155-7454</value>
+          </Data>
+          <Data name="대상">
+            <value>일시적으로 보조기기를 필요로 하는 서초구민</value>
+          </Data>
+          <Data name="전화번호">
+            <value>02-2155-7454</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.02494,37.492041,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>서초3동 주민센터</name>
+        <description><![CDATA[설명: 대상: 일시적으로 보조기기를 필요로 하는 서초구민<br>전화번호: 02-2155-7466<br>대상: 일시적으로 보조기기를 필요로 하는 서초구민<br>전화번호: 02-2155-7466]]></description>
+        <styleUrl>#icon-1591-FFD600</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>대상: 일시적으로 보조기기를 필요로 하는 서초구민
+전화번호: 02-2155-7466</value>
+          </Data>
+          <Data name="대상">
+            <value>일시적으로 보조기기를 필요로 하는 서초구민</value>
+          </Data>
+          <Data name="전화번호">
+            <value>02-2155-7466</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.011964,37.48369,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>서초4동 주민센터</name>
+        <description><![CDATA[설명: 대상: 일시적으로 보조기기를 필요로 하는 서초구민<br>전화번호: 02-2155-7501<br>대상: 일시적으로 보조기기를 필요로 하는 서초구민<br>전화번호: 02-2155-7501]]></description>
+        <styleUrl>#icon-1591-FFD600</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>대상: 일시적으로 보조기기를 필요로 하는 서초구민
+전화번호: 02-2155-7501</value>
+          </Data>
+          <Data name="대상">
+            <value>일시적으로 보조기기를 필요로 하는 서초구민</value>
+          </Data>
+          <Data name="전화번호">
+            <value>02-2155-7501</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.02211,37.502697,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>잠원동 주민센터</name>
+        <description><![CDATA[설명: 대상: 일시적으로 보조기기를 필요로 하는 서초구민<br>전화번호: 02-2155-8201<br>대상: 일시적으로 보조기기를 필요로 하는 서초구민<br>전화번호: 02-2155-8201]]></description>
+        <styleUrl>#icon-1591-FFD600</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>대상: 일시적으로 보조기기를 필요로 하는 서초구민
+전화번호: 02-2155-8201</value>
+          </Data>
+          <Data name="대상">
+            <value>일시적으로 보조기기를 필요로 하는 서초구민</value>
+          </Data>
+          <Data name="전화번호">
+            <value>02-2155-8201</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.01394,37.514958,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>반포본동 주민센터</name>
+        <description><![CDATA[설명: 대상: 일시적으로 보조기기를 필요로 하는 서초구민<br>전화번호: 02-2155-7569<br>대상: 일시적으로 보조기기를 필요로 하는 서초구민<br>전화번호: 02-2155-7569]]></description>
+        <styleUrl>#icon-1591-FFD600</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>대상: 일시적으로 보조기기를 필요로 하는 서초구민
+전화번호: 02-2155-7569</value>
+          </Data>
+          <Data name="대상">
+            <value>일시적으로 보조기기를 필요로 하는 서초구민</value>
+          </Data>
+          <Data name="전화번호">
+            <value>02-2155-7569</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            126.986889,37.501937,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>반포1동 주민센터</name>
+        <description><![CDATA[설명: 대상: 일시적으로 보조기기를 필요로 하는 서초구민<br>전화번호: 02-2155-7616<br>대상: 일시적으로 보조기기를 필요로 하는 서초구민<br>전화번호: 02-2155-7616]]></description>
+        <styleUrl>#icon-1591-FFD600</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>대상: 일시적으로 보조기기를 필요로 하는 서초구민
+전화번호: 02-2155-7616</value>
+          </Data>
+          <Data name="대상">
+            <value>일시적으로 보조기기를 필요로 하는 서초구민</value>
+          </Data>
+          <Data name="전화번호">
+            <value>02-2155-7616</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.013377,37.505081,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>반포2동 주민센터</name>
+        <description><![CDATA[설명: 대상: 일시적으로 보조기기를 필요로 하는 서초구민<br>전화번호: 02-2155-7623<br>대상: 일시적으로 보조기기를 필요로 하는 서초구민<br>전화번호: 02-2155-7623]]></description>
+        <styleUrl>#icon-1591-FFD600</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>대상: 일시적으로 보조기기를 필요로 하는 서초구민
+전화번호: 02-2155-7623</value>
+          </Data>
+          <Data name="대상">
+            <value>일시적으로 보조기기를 필요로 하는 서초구민</value>
+          </Data>
+          <Data name="전화번호">
+            <value>02-2155-7623</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            126.994497,37.504543,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>반포3동 주민센터</name>
+        <description><![CDATA[설명: 대상: 일시적으로 보조기기를 필요로 하는 서초구민<br>전화번호: 02-2155-7672<br>대상: 일시적으로 보조기기를 필요로 하는 서초구민<br>전화번호: 02-2155-7672]]></description>
+        <styleUrl>#icon-1591-FFD600</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>대상: 일시적으로 보조기기를 필요로 하는 서초구민
+전화번호: 02-2155-7672</value>
+          </Data>
+          <Data name="대상">
+            <value>일시적으로 보조기기를 필요로 하는 서초구민</value>
+          </Data>
+          <Data name="전화번호">
+            <value>02-2155-7672</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.005577,37.512048,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>반포4동 주민센터</name>
+        <description><![CDATA[설명: 대상: 일시적으로 보조기기를 필요로 하는 서초구민<br>전화번호: 02-2155-7707<br>대상: 일시적으로 보조기기를 필요로 하는 서초구민<br>전화번호: 02-2155-7707]]></description>
+        <styleUrl>#icon-1591-FFD600</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>대상: 일시적으로 보조기기를 필요로 하는 서초구민
+전화번호: 02-2155-7707</value>
+          </Data>
+          <Data name="대상">
+            <value>일시적으로 보조기기를 필요로 하는 서초구민</value>
+          </Data>
+          <Data name="전화번호">
+            <value>02-2155-7707</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.000377,37.497496,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>방배본동주민센터</name>
+        <description><![CDATA[설명: 대상: 일시적으로 보조기기를 필요로 하는 서초구민<br>전화번호: 02-2155-7715<br>대상: 일시적으로 보조기기를 필요로 하는 서초구민<br>전화번호: 02-2155-7715]]></description>
+        <styleUrl>#icon-1591-FFD600</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>대상: 일시적으로 보조기기를 필요로 하는 서초구민
+전화번호: 02-2155-7715</value>
+          </Data>
+          <Data name="대상">
+            <value>일시적으로 보조기기를 필요로 하는 서초구민</value>
+          </Data>
+          <Data name="전화번호">
+            <value>02-2155-7715</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            126.988842,37.49406,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>방배1동 주민센터</name>
+        <description><![CDATA[설명: 대상: 일시적으로 보조기기를 필요로 하는 서초구민<br>전화번호: 02-2155-7752<br>대상: 일시적으로 보조기기를 필요로 하는 서초구민<br>전화번호: 02-2155-7752]]></description>
+        <styleUrl>#icon-1591-FFD600</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>대상: 일시적으로 보조기기를 필요로 하는 서초구민
+전화번호: 02-2155-7752</value>
+          </Data>
+          <Data name="대상">
+            <value>일시적으로 보조기기를 필요로 하는 서초구민</value>
+          </Data>
+          <Data name="전화번호">
+            <value>02-2155-7752</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            126.99447,37.483323,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>방배2동 주민센터</name>
+        <description><![CDATA[설명: 대상: 일시적으로 보조기기를 필요로 하는 서초구민<br>전화번호: 02-2155-8329<br>대상: 일시적으로 보조기기를 필요로 하는 서초구민<br>전화번호: 02-2155-8329]]></description>
+        <styleUrl>#icon-1591-FFD600</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>대상: 일시적으로 보조기기를 필요로 하는 서초구민
+전화번호: 02-2155-8329</value>
+          </Data>
+          <Data name="대상">
+            <value>일시적으로 보조기기를 필요로 하는 서초구민</value>
+          </Data>
+          <Data name="전화번호">
+            <value>02-2155-8329</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            126.985527,37.47974,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>방배3동 주민센터</name>
+        <description><![CDATA[설명: 대상: 일시적으로 보조기기를 필요로 하는 서초구민<br>전화번호: 02-2155-7824<br>대상: 일시적으로 보조기기를 필요로 하는 서초구민<br>전화번호: 02-2155-7824]]></description>
+        <styleUrl>#icon-1591-FFD600</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>대상: 일시적으로 보조기기를 필요로 하는 서초구민
+전화번호: 02-2155-7824</value>
+          </Data>
+          <Data name="대상">
+            <value>일시적으로 보조기기를 필요로 하는 서초구민</value>
+          </Data>
+          <Data name="전화번호">
+            <value>02-2155-7824</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            126.999929,37.478397,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>방배4동 주민센터</name>
+        <description><![CDATA[설명: 대상: 일시적으로 보조기기를 필요로 하는 서초구민<br>전화번호: 02-2155-7843<br>대상: 일시적으로 보조기기를 필요로 하는 서초구민<br>전화번호: 02-2155-7843]]></description>
+        <styleUrl>#icon-1591-FFD600</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>대상: 일시적으로 보조기기를 필요로 하는 서초구민
+전화번호: 02-2155-7843</value>
+          </Data>
+          <Data name="대상">
+            <value>일시적으로 보조기기를 필요로 하는 서초구민</value>
+          </Data>
+          <Data name="전화번호">
+            <value>02-2155-7843</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            126.992277,37.488929,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>양재1동 주민센터</name>
+        <description><![CDATA[설명: 대상: 일시적으로 보조기기를 필요로 하는 서초구민<br>전화번호: 02-2155-7889<br>대상: 일시적으로 보조기기를 필요로 하는 서초구민<br>전화번호: 02-2155-7889]]></description>
+        <styleUrl>#icon-1591-FFD600</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>대상: 일시적으로 보조기기를 필요로 하는 서초구민
+전화번호: 02-2155-7889</value>
+          </Data>
+          <Data name="대상">
+            <value>일시적으로 보조기기를 필요로 하는 서초구민</value>
+          </Data>
+          <Data name="전화번호">
+            <value>02-2155-7889</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.026819,37.471571,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>양재2동 주민센터</name>
+        <description><![CDATA[설명: 대상: 일시적으로 보조기기를 필요로 하는 서초구민<br>전화번호: 02-2155-7924<br>대상: 일시적으로 보조기기를 필요로 하는 서초구민<br>전화번호: 02-2155-7924]]></description>
+        <styleUrl>#icon-1591-FFD600</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>대상: 일시적으로 보조기기를 필요로 하는 서초구민
+전화번호: 02-2155-7924</value>
+          </Data>
+          <Data name="대상">
+            <value>일시적으로 보조기기를 필요로 하는 서초구민</value>
+          </Data>
+          <Data name="전화번호">
+            <value>02-2155-7924</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.041216,37.470575,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>내곡동 주민센터</name>
+        <description><![CDATA[설명: 대상: 일시적으로 보조기기를 필요로 하는 서초구민<br>전화번호: 02-2155-7937<br>대상: 일시적으로 보조기기를 필요로 하는 서초구민<br>전화번호: 02-2155-7937]]></description>
+        <styleUrl>#icon-1591-FFD600</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>대상: 일시적으로 보조기기를 필요로 하는 서초구민
+전화번호: 02-2155-7937</value>
+          </Data>
+          <Data name="대상">
+            <value>일시적으로 보조기기를 필요로 하는 서초구민</value>
+          </Data>
+          <Data name="전화번호">
+            <value>02-2155-7937</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.058283,37.449297,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>서초구청 </name>
+        <description><![CDATA[설명: 출처 : https://www.seocho.go.kr/site/seocho/WheelChairList.do<br>대상: <br>전화번호: ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>출처 : https://www.seocho.go.kr/site/seocho/WheelChairList.do</value>
+          </Data>
+          <Data name="대상">
+            <value/>
+          </Data>
+          <Data name="전화번호">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.0326987,37.4835872,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>강남구 휠체어 대여소</name>
+      <Placemark>
+        <name>삼성1동 주민센터</name>
+        <description><![CDATA[설명: 대상: <br>전화번호:<br>대상: <br>전화번호: ]]></description>
+        <styleUrl>#icon-1591-E65100</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>대상: 
+전화번호:</value>
+          </Data>
+          <Data name="대상">
+            <value/>
+          </Data>
+          <Data name="전화번호">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.062546,37.514314,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>대치1동 주민센터</name>
+        <description><![CDATA[설명: 대상: <br>전화번호:<br>대상: <br>전화번호: ]]></description>
+        <styleUrl>#icon-1591-E65100</styleUrl>
+        <ExtendedData>
+          <Data name="설명">
+            <value>대상: 
+전화번호:</value>
+          </Data>
+          <Data name="대상">
+            <value/>
+          </Data>
+          <Data name="전화번호">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            127.056777,37.493268,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
