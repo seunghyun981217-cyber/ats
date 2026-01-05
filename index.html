@@ -198,121 +198,91 @@
     </section>
 
     <script>
-        /* --- 자바스크립트 로직 --- */
-        let map, infoWindow;
-        let markers = [];
-        let currentDistrict = "ALL";
+    let map;
+    // KML 레이어들을 담을 배열
+    let kmlLayers = [];
 
-        // 섹션 전환 함수
-        function showSection(sectionId) {
-            document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active'));
-            document.getElementById('section-' + sectionId).classList.add('active');
-            
-            document.querySelectorAll('.nav-item').forEach(a => a.classList.remove('active'));
-            if(sectionId === 'home') document.getElementById('nav-home').classList.add('active');
-            else document.getElementById('nav-map').classList.add('active');
-
-            if(sectionId === 'map' && map) {
-                setTimeout(() => { google.maps.event.trigger(map, "resize"); }, 200);
-            }
+    // 1. 섹션 전환 함수 (홈 <-> 지도)
+    function showSection(sectionId) {
+        document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active'));
+        document.getElementById('section-' + sectionId).classList.add('active');
+        
+        document.querySelectorAll('.nav-item').forEach(a => a.classList.remove('active'));
+        if(sectionId === 'home') {
+            document.getElementById('nav-home').classList.add('active');
+        } else {
+            document.getElementById('nav-map').classList.add('active');
         }
 
-        // 구별 필터링 함수 (드롭다운에서 호출)
-       function filterByDistrict(district) {
-    showSection('map'); // 먼저 지도 화면으로 전환
-    
-    // 각 구별 이동할 좌표
-    const districtCoords = {
-        "강동구": { lat: 37.530, lng: 127.123 },
-        "송파구": { lat: 37.505, lng: 127.106 },
-        "강남구": { lat: 37.495, lng: 127.062 },
-        "성동구": { lat: 37.563, lng: 127.036 },
-        "광진구": { lat: 37.538, lng: 127.082 },
-        "서초구": { lat: 37.483, lng: 127.032 },
-        "ALL": { lat: 37.541, lng: 127.071 }
-    };
-
-    const target = districtCoords[district] || districtCoords["ALL"];
-    
-    // 지도를 해당 위치로 부드럽게 이동
-    map.panTo(target); 
-    
-    // 줌 조절 (구 선택 시 14, 전체보기 시 12)
-    if (district === "ALL") {
-        map.setZoom(12);
-    } else {
-        map.setZoom(14);
+        // 지도로 전환될 때 지도가 깨지지 않게 새로고침 해줌
+        if(sectionId === 'map' && map) {
+            setTimeout(() => {
+                google.maps.event.trigger(map, "resize");
+            }, 200);
+        }
     }
-}
 
-        /* --- 데이터 영역 --- */
-        // 여기에 기존에 가지고 계신 긴 PLACES 배열을 넣으세요.
-        const DISTRICT_COLORS = {"광진구": "#E53935", "성동구": "#1E88E5", "강동구": "#43A047", "송파구": "#8E24AA", "강남구": "#FB8C00", "서초구": "#FDD835"};
-
-        function initMap() {
-         /* --- 전역 변수 설정 --- */
-let map;
-let kmlLayers = []; // 여러 개의 레이어를 담을 배열
-
-function initMap() {
-    // 1. 지도 초기화
-    map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: 37.541, lng: 127.071 },
-        zoom: 12,
-        mapTypeControl: false,
-        streetViewControl: false
-    });
-
-    // 2. KML 파일 경로 배열 (본인의 GitHub 주소로 변경하세요)
-    // 파일이 추가되면 이 배열에 주소만 추가하면 됩니다.
-    const kmlFiles = [
-        "https://seunghyun981217-cyber.github.io/ats/data1.kml",
-        "https://seunghyun981217-cyber.github.io/ats/data2.kml",
-        "https://seunghyun981217-cyber.github.io/ats/data3.kml"
-    ];
-
-    // 3. 반복문을 통해 각 KML 파일을 지도에 추가
-    kmlFiles.forEach(url => {
-        const layer = new google.maps.KmlLayer({
-            url: url + "?v=" + new Date().getTime(), // 캐시 방지를 위해 타임스탬프 추가
-            map: map,
-            preserveViewport: true // 여러 개를 띄울 때는 화면이 멋대로 움직이지 않게 true 설정
+    // 2. 지도 초기화 함수 (구글 맵 API가 실행함)
+    function initMap() {
+        // 지도 생성
+        map = new google.maps.Map(document.getElementById("map"), {
+            center: { lat: 37.541, lng: 127.071 }, // 서울 중심
+            zoom: 12,
+            mapTypeControl: false,
+            streetViewControl: false
         });
-        kmlLayers.push(layer); // 나중에 제어하기 위해 배열에 저장
-    });
-}
 
-        function applyFilters(searchQuery = "") {
-            const q = searchQuery.toLowerCase() || document.getElementById('headerSearch').value.toLowerCase();
-            let bounds = new google.maps.LatLngBounds();
-            let count = 0;
+        // KML 파일 경로 (본인 계정 주소로 되어 있는지 확인!)
+        const kmlFiles = [
+            "https://seunghyun981217-cyber.github.io/ats/data1.kml",
+            "https://seunghyun981217-cyber.github.io/ats/data2.kml",
+            "https://seunghyun981217-cyber.github.io/ats/data3.kml"
+        ];
 
-            markers.forEach(marker => {
-                const p = marker.placeData;
-                const matchDist = (currentDistrict === "ALL" || p.district === currentDistrict);
-                const matchSearch = !q || p.name.toLowerCase().includes(q);
-
-                if (matchDist && matchSearch) {
-                    marker.setMap(map);
-                    bounds.extend(marker.getPosition());
-                    count++;
-                } else {
-                    marker.setMap(null);
-                }
+        // 각 KML 파일을 지도 위에 올림
+        kmlFiles.forEach(url => {
+            const layer = new google.maps.KmlLayer({
+                url: url + "?v=" + new Date().getTime(), // 캐시 방지용 (매번 새 파일로 인식)
+                map: map,
+                preserveViewport: true // 지도가 멋대로 줌인/줌아웃 되지 않게 함
             });
+            kmlLayers.push(layer);
+        });
+    }
 
-            if (count > 0) map.fitBounds(bounds);
-        }
+    // 3. 구별 이동 함수 (드롭다운 클릭 시 실행)
+    function filterByDistrict(district) {
+        showSection('map'); // 지도 화면으로 전환
+        
+        const districtCoords = {
+            "강동구": { lat: 37.530, lng: 127.123 },
+            "송파구": { lat: 37.505, lng: 127.106 },
+            "강남구": { lat: 37.495, lng: 127.062 },
+            "성동구": { lat: 37.563, lng: 127.036 },
+            "광진구": { lat: 37.538, lng: 127.082 },
+            "서초구": { lat: 37.483, lng: 127.032 },
+            "ALL": { lat: 37.541, lng: 127.071 }
+        };
 
-        function handleSearch(val) {
-            if(document.getElementById('section-map').classList.contains('active')) applyFilters(val);
+        const target = districtCoords[district] || districtCoords["ALL"];
+        
+        map.panTo(target); // 해당 위치로 부드럽게 이동
+        
+        if (district === "ALL") {
+            map.setZoom(12);
+        } else {
+            map.setZoom(14); // 특정 구 선택 시 확대
         }
+    }
 
-        function quickFilter(kw) {
-            document.getElementById('headerSearch').value = kw;
-            filterByDistrict('ALL');
-            applyFilters(kw);
+    // 4. 검색창 기능 (간단하게 구현)
+    function handleSearch(val) {
+        if(val.length > 1) {
+            console.log("검색어:", val);
+            // KML 방식에서는 검색이 복잡하므로 여기서는 구 선택을 권장하거나 
+            // 나중에 기능을 추가할 수 있습니다.
         }
+    }
     </script>
     <!-- 구글 맵 API (키를 실제 키로 교체하세요) -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRFrDGLMi8UZgAoDITyJu694vKXdTglbU&callback=initMap&callback=initMap" async defer></script>
